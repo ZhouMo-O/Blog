@@ -1,6 +1,8 @@
-# blog
+# 个人博客
 
 ## Project setup
+#项目介绍：
+
 ```
 npm install
 ```
