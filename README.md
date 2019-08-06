@@ -14,12 +14,12 @@ npm install
 npm run serve
 ```
 
-###run mongodb
+##run mongodb
 ```
 mongod --dbpath "the mongo db path"
 ```
 
-###run express
+##run express
  ```
  cd Server
  node app.js
