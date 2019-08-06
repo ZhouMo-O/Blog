@@ -14,6 +14,17 @@ npm install
 npm run serve
 ```
 
+###run mongodb
+```
+mongod --dbpath "the mongo db path"
+```
+
+###run express
+ ```
+ cd Server
+ node app.js
+ ```
+
 ### Compiles and minifies for production
 ```
 npm run build
