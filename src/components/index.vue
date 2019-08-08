@@ -50,7 +50,7 @@ export default {
 
 <style scoped>
 #body {
-  background: url("./../assets/xiawu3.jpg");
+  background: url("./../assets/zaoshang.jpg");
   position: relative;
   top: -55px;
   background-size: cover;
@@ -65,6 +65,7 @@ export default {
   position: relative;
   top: 30vh;
   font-size: 4rem;
+  text-align: center;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-weight: 500;
@@ -75,6 +76,7 @@ h2 {
   top: 35vh;
   font-size: 18px;
   font-weight: 550;
+  text-align: center;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   letter-spacing: 0.5vw;
