@@ -1,6 +1,6 @@
 // 这个文件主要是做DB操作
 const mongoose = require('mongoose');
-require("../../mondels/blog");
+require("../../model/blog");
 const db = mongoose.model('blog');
 
 class blogDb {
