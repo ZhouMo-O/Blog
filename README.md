@@ -1,8 +1,7 @@
 # 个人博客-sunset
 
 ### 项目介绍
-这是我从事开发行业以来的第一个 个人全栈项目，它是一个基于Vue+express+mongodb的小全栈项目，虽然它还是一个半成品只完成了大约百分之60-70的功能和界面，
-但就因为如此，我希望就从这里开始，能够和它一起成长，一起变得优秀。
+一个基于Vue+express+mongodb的全栈项目
 
 ### 目录结构
 https://www.processon.com/embed/mind/5d4b88d3e4b02c6fb787d627
