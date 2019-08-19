@@ -23,9 +23,6 @@
             <router-link to="/blogList" class="nav-link">Blog</router-link>
           </li>
           <li class="nav-item">
-            <router-link to="/sendBlog" class="nav-link">SendBlog</router-link>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="#">Life</a>
           </li>
           <li class="nav-item">

@@ -2,8 +2,8 @@
   <div class="Index">
     <div class="container-fluid" id="body">
       <!-- 注意 article太小了在1200px也分成一个好了 -->
-      <h1 class="animated zoomInDown" id="TopText">this is title</h1>
-      <h2 class="animated zoomInDown">{{IndexData.date}}</h2>
+      <h1 class="animated fadeInUp" id="TopText">周·末</h1>
+      <h2 class="animated fadeInUp">{{IndexData.date}}</h2>
     </div>
     <Mybody />
   </div>
@@ -86,9 +86,9 @@ h2 {
   border: 1px solid red;
 }
 
-.zoomInDown {
+.fadeInUp {
   color: #e8eaed;
-  animation-duration: 2s; /*动画持续时间*/
+  animation-duration: 1.5s; /*动画持续时间*/
   animation-delay: 0; /*动画延迟时间，多个元素，延迟时间要依次累加*/
   animation-iteration-count: 1; /*动画执行次数*/
   animation-fill-mode: both; /*---设置对象状态为动画结束或开始的状态;*/

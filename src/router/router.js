@@ -4,14 +4,12 @@ import blogList from '../components/blog/blogList';
 import showBlog from '../components/blog/showBlog';
 import blogManagerment from '../components/blogManagerment/managerment';
 import deleteBlog from '../components/blogManagerment/deleteBlog';
+import edit from '../components/blogManagerment/edit';
 
 
 export const routes = [{
         path: '/',
         component: index
-    }, {
-        path: '/sendBlog',
-        component: sendBlog
     }, {
         path: '/showBlog/:id',
         component: showBlog
@@ -26,6 +24,14 @@ export const routes = [{
             path: '/blogManagerment/deleteBlog',
             name: 'deleteBlog',
             component: deleteBlog,
+        }, {
+            path: '/blogManagerment/sendBlog',
+            name: 'sendBlog',
+            component: sendBlog,
+        }, {
+            path: '/blogManagerment/edit',
+            name: 'edit',
+            component: edit
         }]
     },
     {

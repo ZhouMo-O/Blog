@@ -9,8 +9,9 @@ class BlogRouter {
     }
 
     static sendBlog(req, res) {
-        db.save(req.body.title, req.body.body, req.body.tagCloud, req.body.author)
+        db.save(req.body.markdown, req.body.html)
             .then((data) => {
+                console.log(data);
                 console.log(`添加博客:${req.body.title}`);
             })
             .catch(err => {
@@ -30,15 +31,18 @@ class BlogRouter {
     }
 
     static findBlog(req, res) {
-        db.findBlog(req.params.id)
-            .then(data => {
-                console.log(`查找博客:${data.title}id:${data.id}`);
-                res.json(data)
-            })
-            .catch(err => {
-                console.log(err);
-            })
+        // db.findBlog(req.params.id)
+        //     .then(data => {
+        //         console.log(`查找博客:${data.title}id:${data.id}`);
+        //         res.json(data)
+        //     })
+        //     .catch(err => {
+        //         console.log(err);
+        //     })
+        console.log(req.params.id);
+        res.json("ok")
     }
+
 
     static deleteBlog(req, res) {
         db.deleteOneBlog(req.params.id)

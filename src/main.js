@@ -5,15 +5,21 @@ import './registerServiceWorker';
 import animated from 'animate.css'; // npm install animate.css --save安装，再引入
 import axios from 'axios';
 import qs from 'qs'
+import mavonEditor from 'mavon-editor'
+import 'mavon-editor/dist/css/index.css'
 import Mybody from './components/body/Mybody.vue';
 import {
   routes
 } from './router/router'
 
+//mavon markdown
+Vue.use(mavonEditor)
 
+//axios
 Vue.prototype.axios = axios;
 Vue.prototype.HOST = '/api'
-//添加请求拦截器
+
+//axios添加请求拦截器
 axios.interceptors.request.use(function (config) {
   config.headers['Content-Type'] = 'application/x-www-form-urlencoded'
   if (config.method === 'post') { // post请求时，处理数据
@@ -26,7 +32,8 @@ axios.interceptors.request.use(function (config) {
   loadinginstace.close()
   return Promise.reject(error);
 })
-//添加响应拦截器
+
+//axios添加响应拦截器
 axios.interceptors.response.use(function (response) {
   return response;
 }, function (error) {

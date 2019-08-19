@@ -1,10 +1,16 @@
 <template>
-  <h1>编辑博客页面</h1>
+  <div>this is the news page.the transform param is {{this.$route.params.userId}}</div>
 </template>
 
 <script>
 export default {
-  name: "redact"
+  name: "redact",
+  data() {
+    return {
+      title: "fox"
+    };
+  },
+  methods: {}
 };
 </script>
 

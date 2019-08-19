@@ -1,6 +1,8 @@
 <template>
-  <div>
-    <h1>{{blog.title}}</h1>
+  <div class="container">
+    <div class="head">
+      <h1>{{blog.title}}</h1>
+    </div>
     <p>{{blog.body}}</p>
   </div>
 </template>
@@ -28,5 +30,20 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.container {
+  margin-top: 50px;
+
+  border: 1px solid #e3e3e5;
+  box-shadow: 1px -5px 15px #e3e3e5;
+  border-radius: 5px;
+  background: #fafafa;
+  display: inline-block;
+}
+.head {
+  border: 1px solid red;
+}
+.head > h1 {
+  text-align: left;
+}
 </style>

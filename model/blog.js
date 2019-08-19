@@ -6,6 +6,14 @@ const blogSchema = new Schema({
         type: String,
         default: true
     },
+    markdown: {
+        type: String,
+        default: true,
+    },
+    html: {
+        type: String,
+        default: true,
+    },
     body: {
         type: String,
         default: true

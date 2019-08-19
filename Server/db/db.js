@@ -5,12 +5,10 @@ const db = mongoose.model('blog');
 
 class blogDb {
     //存博客
-    static save(title, body, tagCloud, author) {
+    static save(markdown, html) {
         let newBlog = new db({
-            title: title,
-            body: body,
-            tagCloud: tagCloud,
-            author: author,
+            markdown: markdown,
+            html: html,
         })
         return newBlog.save();
     }
