@@ -19,18 +19,12 @@
         <button type="submit" class="btn btn-primary" v-on:click="sendBlog">Submit</button>
       </div>
     </div>-->
-    <p>博客标题</p>
+    <p class="blogTitle">博客标题：</p>
     <input type="text" v-model="blogData.title" class="title form-control" />
     <div id="main">
-      <mavon-editor
-        class="mavon"
-        ref="editor"
-        @change="UpdataDoc"
-        v-model="value"
-        :toolbars="toolbars"
-        @save="saveDoc"
-      />
+      <mavon-editor class="mavon" ref="editor" @change="UpdataDoc" v-model="blogData.markdown" />
     </div>
+    <button type="submit" class="btn btn-primary" v-on:click="saveDoc(markdown,html)">保存</button>
   </div>
 </template>
 
@@ -40,65 +34,54 @@ export default {
   data() {
     return {
       value: "",
-      blogData: { title: "", body: "", tagCloud: [], author: "" },
-      toolbars: {
-        bold: true, // 粗体
-        italic: true, // 斜体
-        header: true, // 标题
-        underline: true, // 下划线
-        mark: true, // 标记
-        superscript: true, // 上角标
-        quote: true, // 引用
-        ol: true, // 有序列表
-        link: true, // 链接
-        imagelink: true, // 图片链接
-        help: true, // 帮助
-        code: true, // code
-        subfield: true, // 是否需要分栏
-        fullscreen: true, // 全屏编辑
-        readmodel: true, // 沉浸式阅读
-        /* 1.3.5 */
-        undo: true, // 上一步
-        trash: true, // 清空
-        //save: true, // 保存（触发events中的save事件）
-        /* 1.4.2 */
-        navigation: true // 导航目录
-      }
+      html: "",
+      markdown: "",
+      blogData: { title: "", body: "", tagCloud: [], author: "" }
     };
   },
   methods: {
     sendBlog() {
-      let data = this.blogData;
-      // JSON.stringify(data)  保留方法 后续研究
-      this.axios.post("http://192.168.1.107:3333/sendBlog", data).then(data => {
-        console.log(data);
-      });
+      console.log("111");
     },
     //实际传入了这两个参数 $refs.editor.d_value,$refs.editor.d_render
     UpdataDoc(markdown, html) {
-      console.log(markdown);
+      this.markdown = markdown;
+      this.html = html;
+      console.log(this.markdown, this.html);
     },
     saveDoc(markdown, html) {
-      console.log(html);
-      let data = { markdown: markdown, html: html };
-      this.axios.post("http://192.168.1.107:3333/sendBlog", data).then(data => {
-        console.log(data);
-      });
-    },
-    getBlog() {
-      let id = JSON.stringify(this.$route.params.userId);
-
+      let data = { markdown: markdown, html: html, title: this.blogData.title };
+      let url;
+      if (this.$route.params.userId) {
+        url = "http://192.168.1.107:3333/sendBlog" + this.$route.params.userId;
+      } else {
+        url = "http://192.168.1.107:3333/sendBlog";
+      }
       this.axios
-        .get(`http://192.168.1.107:3333/findBlog/${{ id }}`)
+        .post(url, data)
         .then(data => {
           console.log(data);
+        })
+        .catch(err => {
+          console.log(err);
+        });
+    },
+    //根据传入的ID去获取博客
+    getBlog(id) {
+      this.axios
+        .get(`http://192.168.1.107:3333/findBlog/` + id)
+        .then(data => {
+          this.blogData = data.data;
+        })
+        .catch(err => {
+          console.log(err);
         });
     }
   },
   mounted: function() {
+    //如果通过路由传入了ID那么就进入了编辑模式
     if (this.$route.params.userId) {
-      console.log(this.$route.params.userId);
-      this.getBlog();
+      this.getBlog(this.$route.params.userId);
     }
   }
 };
@@ -107,6 +90,10 @@ export default {
 <style scoped>
 h1 {
   margin: 10px;
+}
+
+.blogTitle {
+  text-align: left;
 }
 
 .title {
@@ -120,6 +107,11 @@ h1 {
 .container {
   display: inline-block;
   min-height: 90vh;
+}
+
+.btn {
+  margin: 5px;
+  float: right;
 }
 
 .card {

@@ -3,7 +3,7 @@
     <div class="head">
       <h1>{{blog.title}}</h1>
     </div>
-    <p>{{blog.body}}</p>
+    <p v-html="blog.html"></p>
   </div>
 </template>
 

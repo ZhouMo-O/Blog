@@ -5,10 +5,11 @@ const db = mongoose.model('blog');
 
 class blogDb {
     //存博客
-    static save(markdown, html) {
+    static save(markdown, html, title) {
         let newBlog = new db({
             markdown: markdown,
             html: html,
+            title: title
         })
         return newBlog.save();
     }
@@ -20,17 +21,27 @@ class blogDb {
                 date: 'desc'
             })
     }
-
+    //查找一个博客
     static findBlog(id) {
         return db.findOne({
             _id: id
         })
     }
-
+    //删除一个博客
     static deleteOneBlog(id) {
         return db.deleteOne({
             _id: id
         })
+    }
+    //编辑博客
+    static Editblog(id, markdown, html) {
+        return db.findOne({
+                _id: id
+            })
+            .then(blog => {
+                blog.markdown = markdown;
+                blog.html = html;
+            })
     }
 }
 

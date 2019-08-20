@@ -10,9 +10,9 @@
         </div>
       </div>
       <h5>{{blog.title.length >10? blog.title.slice(0,10)+'...':blog.title}}</h5>
-      <p class="content">{{blog.body.length>30?blog.body.slice(0,15)+'...':blog.body}}</p>
+      <p class="content" v-html="blog.html">{{blog.html.slice(0,1)}}</p>
       <span v-bind:id="blog._id" class="deleteBlog" v-on:click="toggle($event)"></span>
-      <span @click="routerTo" v-bind:id="blog._id" class="edit"></span>
+      <span @click="routerTo(blog._id)" v-bind:id="blog._id" class="edit"></span>
     </div>
   </div>
 </template>
@@ -57,10 +57,10 @@ export default {
         });
     },
     //传递Id
-    routerTo() {
+    routerTo(id) {
       this.$router.push({
         name: "sendBlog",
-        params: { userId: this.blogData[0]._id }
+        params: { userId: id }
       });
     },
     toggle(e) {

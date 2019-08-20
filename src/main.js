@@ -18,6 +18,7 @@ Vue.use(mavonEditor)
 //axios
 Vue.prototype.axios = axios;
 Vue.prototype.HOST = '/api'
+axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'; // 配置请求头
 
 //axios添加请求拦截器
 axios.interceptors.request.use(function (config) {

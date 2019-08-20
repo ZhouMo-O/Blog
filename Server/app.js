@@ -33,6 +33,8 @@ app.get('/findAllBlog', BlogRouter.findAllBlog)
 app.get('/findBlog/:id', urlencodedParser, BlogRouter.findBlog)
 
 app.post('/deleteBlog/:id', urlencodedParser, BlogRouter.deleteBlog)
+
+app.put('/Editblog/:id', urlencodedParser, BlogRouter.Editblog)
 //---------------------数据库服务--------------------------
 mongoose.connect('mongodb://localhost/blog', {
         useNewUrlParser: true
