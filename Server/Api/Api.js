@@ -53,9 +53,9 @@ class BlogRouter {
     }
 
     static Editblog(req, res) {
-        db.Editblog(req.params.id, req.body.markdown, req.body.html)
+        console.log(req.body)
+        db.Editblog(req.params.id, req.body.markdown, req.body.html, req.body.title)
             .then(data => {
-                res.json(data);
                 console.log("更新完毕");
             })
             .catch(err => {

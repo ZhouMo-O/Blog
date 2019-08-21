@@ -3,7 +3,7 @@ const app = express();
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose')
 const port = 3333;
-const BlogRouter = require('./Api/Api').BlogRouter;
+const Api = require('./Api/Api').BlogRouter;
 
 
 
@@ -26,15 +26,15 @@ app.all('*', function (req, res, next) {
 });
 
 
-app.post('/sendBlog', urlencodedParser, BlogRouter.sendBlog)
+app.post('/sendBlog', urlencodedParser, Api.sendBlog)
 
-app.get('/findAllBlog', BlogRouter.findAllBlog)
+app.get('/findAllBlog', Api.findAllBlog)
 
-app.get('/findBlog/:id', urlencodedParser, BlogRouter.findBlog)
+app.get('/findBlog/:id', urlencodedParser, Api.findBlog)
 
-app.post('/deleteBlog/:id', urlencodedParser, BlogRouter.deleteBlog)
+app.post('/deleteBlog/:id', urlencodedParser, Api.deleteBlog)
 
-app.put('/Editblog/:id', urlencodedParser, BlogRouter.Editblog)
+app.post('/Editblog/:id', urlencodedParser, Api.Editblog)
 //---------------------数据库服务--------------------------
 mongoose.connect('mongodb://localhost/blog', {
         useNewUrlParser: true

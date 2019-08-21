@@ -24,7 +24,7 @@
     <div id="main">
       <mavon-editor class="mavon" ref="editor" @change="UpdataDoc" v-model="blogData.markdown" />
     </div>
-    <button type="submit" class="btn btn-primary" v-on:click="saveDoc(markdown,html)">保存</button>
+    <button type="btn" class="btn btn-primary" v-on:click="saveDoc(markdown,html)">保存</button>
   </div>
 </template>
 
@@ -40,9 +40,6 @@ export default {
     };
   },
   methods: {
-    sendBlog() {
-      console.log("111");
-    },
     //实际传入了这两个参数 $refs.editor.d_value,$refs.editor.d_render
     UpdataDoc(markdown, html) {
       this.markdown = markdown;
@@ -52,19 +49,22 @@ export default {
     saveDoc(markdown, html) {
       let data = { markdown: markdown, html: html, title: this.blogData.title };
       let url;
+
       if (this.$route.params.userId) {
-        url = "http://192.168.1.107:3333/sendBlog" + this.$route.params.userId;
-      } else {
-        url = "http://192.168.1.107:3333/sendBlog";
-      }
-      this.axios
-        .post(url, data)
-        .then(data => {
+        console.log("put");
+        console.log(data);
+
+        url = "http://192.168.1.107:3333/Editblog/" + this.$route.params.userId;
+        this.axios.post(url, data).then(data => {
           console.log(data);
-        })
-        .catch(err => {
-          console.log(err);
         });
+      } else {
+        console.log("post");
+        url = "http://192.168.1.107:3333/sendBlog";
+        this.axios.post(url, [data]).then(data => {
+          console.log(data);
+        });
+      }
     },
     //根据传入的ID去获取博客
     getBlog(id) {

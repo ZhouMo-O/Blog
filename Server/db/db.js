@@ -34,14 +34,20 @@ class blogDb {
         })
     }
     //编辑博客
-    static Editblog(id, markdown, html) {
+    static Editblog(id, markdown, html, title) {
         return db.findOne({
                 _id: id
             })
-            .then(blog => {
-                blog.markdown = markdown;
-                blog.html = html;
+            .then(data => {
+                data.markdown = markdown;
+                data.html = html;
+                data.title = title;
+                return data.save();
             })
+            .catch(err => {
+                console.log(err);
+            })
+
     }
 }
 
