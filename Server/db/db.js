@@ -5,11 +5,12 @@ const db = mongoose.model('blog');
 
 class blogDb {
     //存博客
-    static save(markdown, html, title) {
+    static save(markdown, html, title, Intro) {
         let newBlog = new db({
             markdown: markdown,
             html: html,
-            title: title
+            title: title,
+            Intro: Intro
         })
         return newBlog.save();
     }
@@ -34,7 +35,7 @@ class blogDb {
         })
     }
     //编辑博客
-    static Editblog(id, markdown, html, title) {
+    static Editblog(id, markdown, html, title, Intro) {
         return db.findOne({
                 _id: id
             })
@@ -42,6 +43,7 @@ class blogDb {
                 data.markdown = markdown;
                 data.html = html;
                 data.title = title;
+                data.Intro = Intro;
                 return data.save();
             })
             .catch(err => {

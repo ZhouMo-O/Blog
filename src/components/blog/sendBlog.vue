@@ -19,12 +19,19 @@
         <button type="submit" class="btn btn-primary" v-on:click="sendBlog">Submit</button>
       </div>
     </div>-->
-    <p class="blogTitle">博客标题：</p>
+    <p class="blogTitle">文章标题：</p>
     <input type="text" v-model="blogData.title" class="title form-control" />
+    <p class="blogIntro">文章简介：</p>
+    <input type="text" v-model="blogData.Intro" class="title form-control" />
     <div id="main">
       <mavon-editor class="mavon" ref="editor" @change="UpdataDoc" v-model="blogData.markdown" />
     </div>
-    <button type="btn" class="btn btn-primary" v-on:click="saveDoc(markdown,html)">保存</button>
+    <button
+      type="btn"
+      :toolbars="toolbars"
+      class="btn btn-primary"
+      v-on:click="saveDoc(blogData.markdown,blogData.html)"
+    >保存</button>
   </div>
 </template>
 
@@ -33,21 +40,54 @@ export default {
   name: "sendBlog",
   data() {
     return {
-      value: "",
-      html: "",
-      markdown: "",
-      blogData: { title: "", body: "", tagCloud: [], author: "" }
+      blogData: {
+        title: "",
+        Intro: "",
+        tagCloud: [],
+        author: "",
+        html: "",
+        markdown: ""
+      },
+      toolbars: {
+        bold: true, // 粗体
+        italic: true, // 斜体
+        header: true, // 标题
+        underline: true, // 下划线
+        mark: true, // 标记
+        superscript: true, // 上角标
+        quote: true, // 引用
+        ol: true, // 有序列表
+        link: true, // 链接
+        imagelink: true, // 图片链接
+        help: true, // 帮助
+        code: true, // code
+        subfield: true, // 是否需要分栏
+        fullscreen: true, // 全屏编辑
+        readmodel: true, // 沉浸式阅读
+        /* 1.3.5 */
+        undo: true, // 上一步
+        trash: true, // 清空
+        // save: true, // 保存（触发events中的save事件）
+        /* 1.4.2 */
+        navigation: true // 导航目录
+      }
     };
   },
   methods: {
     //实际传入了这两个参数 $refs.editor.d_value,$refs.editor.d_render
+    //这个函数的作用是存储编辑之前的内容。
     UpdataDoc(markdown, html) {
-      this.markdown = markdown;
-      this.html = html;
+      this.blogData.markdown = markdown;
+      this.blogData.html = html;
       console.log(this.markdown, this.html);
     },
     saveDoc(markdown, html) {
-      let data = { markdown: markdown, html: html, title: this.blogData.title };
+      let data = {
+        markdown: markdown,
+        html: html,
+        title: this.blogData.title,
+        Intro: this.blogData.Intro
+      };
       let url;
 
       if (this.$route.params.userId) {
@@ -61,7 +101,7 @@ export default {
       } else {
         console.log("post");
         url = "http://192.168.1.107:3333/sendBlog";
-        this.axios.post(url, [data]).then(data => {
+        this.axios.post(url, data).then(data => {
           console.log(data);
         });
       }
@@ -96,10 +136,13 @@ h1 {
   text-align: left;
 }
 
-.title {
-  margin-bottom: 50px;
+.blogIntro {
+  text-align: left;
 }
 
+.title {
+  margin-bottom: 10px;
+}
 .mavon {
   height: 70vh;
 }
@@ -110,7 +153,7 @@ h1 {
 }
 
 .btn {
-  margin: 5px;
+  margin: 10px;
   float: right;
 }
 

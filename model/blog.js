@@ -14,9 +14,9 @@ const blogSchema = new Schema({
         type: String,
         default: true,
     },
-    body: {
+    Intro: {
         type: String,
-        default: true
+        default: '点击查看详情'
     },
     tagCloud: {
         type: Array,

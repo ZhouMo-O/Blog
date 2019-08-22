@@ -9,7 +9,7 @@ class BlogRouter {
     }
 
     static sendBlog(req, res) {
-        db.save(req.body.markdown, req.body.html, req.body.title)
+        db.save(req.body.markdown, req.body.html, req.body.title, req.body.Intro)
             .then((data) => {
                 console.log(data);
                 console.log(`添加博客:${req.body.title}`);
@@ -54,7 +54,7 @@ class BlogRouter {
 
     static Editblog(req, res) {
         console.log(req.body)
-        db.Editblog(req.params.id, req.body.markdown, req.body.html, req.body.title)
+        db.Editblog(req.params.id, req.body.markdown, req.body.html, req.body.title, req.body.Intro)
             .then(data => {
                 console.log("更新完毕");
             })

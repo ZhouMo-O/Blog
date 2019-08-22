@@ -10,7 +10,7 @@
         </div>
       </div>
       <h5>{{blog.title.length >10? blog.title.slice(0,10)+'...':blog.title}}</h5>
-      <p class="content" v-html="blog.html">{{blog.html.slice(0,1)}}</p>
+      <p class="content">{{blog.Intro.length >10? blog.Intro.slice(0,10)+'...':blog.Intro}}</p>
       <span v-bind:id="blog._id" class="deleteBlog" v-on:click="toggle($event)"></span>
       <span @click="routerTo(blog._id)" v-bind:id="blog._id" class="edit"></span>
     </div>

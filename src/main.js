@@ -5,15 +5,21 @@ import './registerServiceWorker';
 import animated from 'animate.css'; // npm install animate.css --save安装，再引入
 import axios from 'axios';
 import qs from 'qs'
-import mavonEditor from 'mavon-editor'
+import mavonEditor from 'mavon-editor' //编辑器
 import 'mavon-editor/dist/css/index.css'
-import Mybody from './components/body/Mybody.vue';
+import Mybody from './components/body/Mybody.vue'; //但是测试用的文件 后面要导入到router的那个文件夹里。
 import {
   routes
-} from './router/router'
+} from './router/router' //路由
+import hljs from 'highlight.js/lib/highlight'; //代码高亮
+import javascript from 'highlight.js/lib/languages/javascript'; //默认解析js
+
 
 //mavon markdown
 Vue.use(mavonEditor)
+
+//代码高亮
+hljs.registerLanguage('javascript', javascript);
 
 //axios
 Vue.prototype.axios = axios;

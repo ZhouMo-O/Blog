@@ -14,7 +14,7 @@
             <a href="#">{{blog.title.length>10?blog.title.slice(0,10)+'...':blog.title}}</a>
           </h3>
           <!-- 文章简介 -->
-          <p>{{blog.body.length>10?blog.body.slice(0,20)+'...':blog.body}}</p>
+          <p>{{blog.Intro.length>10?blog.Intro.slice(0,20)+'...':blog.Intro}}</p>
 
           <!-- 时间 -->
           <div class="date">{{blog.date.slice(0,10)}}</div>
