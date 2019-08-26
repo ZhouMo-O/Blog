@@ -25,6 +25,9 @@ app.all('*', function (req, res, next) {
     next();
 });
 
+app.get('/', (req, res) => {
+    res.send('test')
+})
 
 app.post('/sendBlog', urlencodedParser, Api.sendBlog)
 

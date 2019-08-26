@@ -29,7 +29,7 @@ export default {
   },
   created() {
     this.axios
-      .get("http://192.168.1.107:3333/findAllBlog")
+      .get("/findAllBlog")
       .then(data => {
         console.log(data.data);
         data.data.ok = true;
@@ -48,7 +48,7 @@ export default {
         e.currentTarget.parentElement.parentElement.parentElement
       )[0];
       this.axios
-        .post(`http://192.168.1.107:3333/deleteBlog/${selectedBedDomValue}`)
+        .post(`/deleteBlog/${selectedBedDomValue}`)
         .then(data => {
           hiddenCard.style.display = "none";
         })

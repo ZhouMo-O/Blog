@@ -56,7 +56,7 @@ export default {
     };
   },
   created() {
-    this.axios.get("http://192.168.1.107:3333/findAllBlog").then(data => {
+    this.axios.get("/findAllBlog").then(data => {
       this.blogs = data.data.slice(0, 10);
       console.log(this.blogs);
     });

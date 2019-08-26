@@ -94,13 +94,13 @@ export default {
         console.log("put");
         console.log(data);
 
-        url = "http://192.168.1.107:3333/Editblog/" + this.$route.params.userId;
+        url = "/Editblog/" + this.$route.params.userId;
         this.axios.post(url, data).then(data => {
           console.log(data);
         });
       } else {
         console.log("post");
-        url = "http://192.168.1.107:3333/sendBlog";
+        url = "/sendBlog";
         this.axios.post(url, data).then(data => {
           console.log(data);
         });
@@ -109,7 +109,7 @@ export default {
     //根据传入的ID去获取博客
     getBlog(id) {
       this.axios
-        .get(`http://192.168.1.107:3333/findBlog/` + id)
+        .get(`/findBlog/` + id)
         .then(data => {
           this.blogData = data.data;
         })

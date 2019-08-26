@@ -25,6 +25,7 @@ hljs.registerLanguage('javascript', javascript);
 Vue.prototype.axios = axios;
 Vue.prototype.HOST = '/api'
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'; // 配置请求头
+axios.defaults.baseURL = 'http://localhost:3333';
 
 //axios添加请求拦截器
 axios.interceptors.request.use(function (config) {
