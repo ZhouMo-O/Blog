@@ -30,7 +30,7 @@
       type="btn"
       :toolbars="toolbars"
       class="btn btn-primary"
-      v-on:click="saveDoc(blogData.markdown,blogData.html)"
+      v-on:click="saveDoc(blogData.markdown,blogData.html),routerTo()"
     >保存</button>
   </div>
 </template>
@@ -79,8 +79,8 @@ export default {
     UpdataDoc(markdown, html) {
       this.blogData.markdown = markdown;
       this.blogData.html = html;
-      console.log(this.markdown, this.html);
     },
+    //save方法
     saveDoc(markdown, html) {
       let data = {
         markdown: markdown,
@@ -88,12 +88,12 @@ export default {
         title: this.blogData.title,
         Intro: this.blogData.Intro
       };
+      //保存的时候判断一下路由上有没有ID传过来，有的话就是编辑，没有就是发布，
+      //然后路由重定向一下
       let url;
-
       if (this.$route.params.userId) {
         console.log("put");
         console.log(data);
-
         url = "/Editblog/" + this.$route.params.userId;
         this.axios.post(url, data).then(data => {
           console.log(data);
@@ -116,6 +116,11 @@ export default {
         .catch(err => {
           console.log(err);
         });
+    },
+    routerTo() {
+      this.$router.push({
+        name: "deleteBlog"
+      });
     }
   },
   mounted: function() {
