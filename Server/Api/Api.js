@@ -71,6 +71,7 @@ class BlogRouter {
 
     static userRegister(req,res){
         console.log(req.body);
+        let user = db.
         res.json('register');
     }
 
