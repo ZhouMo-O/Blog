@@ -8,10 +8,14 @@ const Api = require('./Api/Api').BlogRouter;
 
 
 ///---------------------中间件--------------------------
-var jsonParser = bodyParser.json()
-var urlencodedParser = bodyParser.urlencoded({
+const jsonParser = bodyParser.json()
+const urlencodedParser = bodyParser.urlencoded({
     extended: false
 })
+
+//让路由可以接收json数据
+
+app.use(express.json())
 
 
 
@@ -29,6 +33,7 @@ app.get('/', (req, res) => {
     res.send('test')
 })
 
+//blog
 app.post('/sendBlog', urlencodedParser, Api.sendBlog)
 
 app.get('/findAllBlog', Api.findAllBlog)
@@ -38,9 +43,19 @@ app.get('/findBlog/:id', urlencodedParser, Api.findBlog)
 app.post('/deleteBlog/:id', urlencodedParser, Api.deleteBlog)
 
 app.post('/Editblog/:id', urlencodedParser, Api.Editblog)
+
+//user
+app.post('/login',urlencodedParser,Api.userLogin);
+
+app.post('/register',urlencodedParser,Api.userRegister);
+
+app.get('/findUser',urlencodedParser,Api.findUser);
+
+app.get('/findOneUser',urlencodedParser,Api.findOneUser);
 //---------------------数据库服务--------------------------
-mongoose.connect('mongodb://localhost/blog', {
-        useNewUrlParser: true
+mongoose.connect('mongodb://localhost:27017/blog', {
+        useNewUrlParser: true,
+        useCreateIndex:true
     })
     .then(() => {
         console.log('数据库连接成功')

@@ -1,7 +1,7 @@
 <template>
   <div class="allBlog">
     <h3>管理博客:</h3>
-    <div class="card card-body mb-2 animated fadeIn" v-for="blog in blogData" v-if="blog">
+    <div class="card card-body mb-2 animated fadeIn" v-for="blog in blogData" :key="blog.title">
       <div class="message" v-show="blog.blog">
         <div class="delete_box">
           <p>是否删除博客:{{blog.title}}</p>

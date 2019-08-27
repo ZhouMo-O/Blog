@@ -53,7 +53,6 @@ class BlogRouter {
     }
 
     static Editblog(req, res) {
-        console.log(req.body)
         db.Editblog(req.params.id, req.body.markdown, req.body.html, req.body.title, req.body.Intro)
             .then(data => {
                 console.log("更新完毕");
@@ -61,6 +60,30 @@ class BlogRouter {
             .catch(err => {
                 console.log(err);
             })
+    }
+
+    //user
+    static userLogin(req,res){
+        console.log(req.body);
+        let user = db.findOneUser(req.body.id);
+        res.json('login')
+    }
+
+    static userRegister(req,res){
+        console.log(req.body);
+        res.json('register');
+    }
+
+    static findUser(req,res){
+        console.log(req.body);
+        let user = db.findUser();
+        res.send(user);
+    }
+
+    static findOneUser(req,res){
+        console.log(req.body);
+        let user = db.findOneUser(req.body.id);
+        res.send(user);
     }
 }
 

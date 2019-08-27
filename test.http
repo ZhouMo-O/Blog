@@ -1,0 +1,23 @@
+@url=http://localhost:3333
+
+@json=Content-Type: application/json
+
+###
+post {{url}}/register
+{{json}}
+
+{
+    "username":"user1",
+    "password":"123456"
+}
+
+####
+post {{url}}/login
+
+####
+post {{url}}/login
+
+
+//查找某个用户
+###
+get {{url}}/findOneUser

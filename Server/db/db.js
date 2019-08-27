@@ -2,6 +2,8 @@
 const mongoose = require('mongoose');
 require("../../model/blog");
 const db = mongoose.model('blog');
+require("../../model/user");
+const user = mongoose.model('user');
 
 class blogDb {
     //存博客
@@ -50,6 +52,26 @@ class blogDb {
                 console.log(err);
             })
 
+    }
+
+    static findUser(){
+        return user.find().then(data=>{
+            return data;
+        })
+        .catch(err=>{
+            console.err(err);
+        })
+    }
+
+    static findOneUser(id){
+        return user.find({
+            _id:id
+        }).then(data=>{
+            return data;
+        })
+        .catch(err=>{
+            console.err(err);
+        })
     }
 }
 

@@ -13,6 +13,7 @@ import {
 } from './router/router' //路由
 import hljs from 'highlight.js/lib/highlight'; //代码高亮
 import javascript from 'highlight.js/lib/languages/javascript'; //默认解析js
+import swal from 'sweetalert';
 
 
 //mavon markdown
