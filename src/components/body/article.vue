@@ -76,7 +76,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 /*动画*/
 @keyframes myfirst {
   from {

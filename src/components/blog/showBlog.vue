@@ -3,9 +3,22 @@
     <div class="title">
       <h1>{{blog.title}}</h1>
       <div class="artlceMsg">
-        <span class="data">{{blog.date.slice(0,10)}}</span>
-        <span class="read">111</span>
-        <span class="like">11</span>
+        <span class="date">{{blog.date}}</span>
+
+        <span class="read">
+          <span class="readIcon"></span>
+          <span class="read_number">:{{blog.read}}</span>
+        </span>
+
+        <span class="like">
+          <span class="likeIcon"></span>
+          <span class="like_number">:{{blog.read}}</span>
+        </span>
+
+        <span class="comment">
+          <span class="commentIcon"></span>
+          <span class="comment_number">:{{blog.read}}</span>
+        </span>
       </div>
     </div>
     <div v-html="blog.html" class="markdown-body articles"></div>
@@ -25,8 +38,8 @@ export default {
     this.axios
       .get(`http://localhost:3333/findBlog/${this.id}`)
       .then(data => {
-        console.log(data);
         this.blog = data.data;
+        this.blog.date = this.blog.date.slice(0, 10);
       })
       .catch(err => {
         console.log(err);
@@ -52,6 +65,82 @@ export default {
   min-height: 75vh;
   margin: 10px;
   padding: 20px;
+}
+
+.artlceMsg {
+  height: 20px;
+  /* border: 1px solid red; */
+}
+
+/*时间*/
+.date {
+  float: left;
+  margin-right: 10px;
+  /* border: 1px solid red; */
+}
+
+/*查看*/
+.read {
+  float: left;
+}
+
+.readIcon {
+  width: 20px;
+  height: 20px;
+  display: block;
+  float: left;
+  background: url("../../assets/read.svg") no-repeat;
+  background-size: cover;
+}
+
+.read .read_number {
+  font-size: 14px;
+  margin-right: 10px;
+  display: block;
+  float: left;
+}
+
+/*点赞*/
+.like {
+  float: left;
+}
+
+.likeIcon {
+  width: 20px;
+  height: 20px;
+  display: block;
+  float: left;
+  background: url("../../assets/like.svg") no-repeat;
+  background-size: cover;
+}
+
+.like .like_number {
+  font-size: 14px;
+  display: block;
+  margin-right: 10px;
+  float: left;
+}
+
+/*评论*/
+.comment {
+  float: left;
+}
+
+.commentIcon {
+  width: 20px;
+  height: 20px;
+  display: block;
+  float: left;
+  background: url("../../assets/pinglun.svg");
+  background-size: cover;
+}
+
+.comment .comment_number {
+  font-size: 14px;
+  display: block;
+  margin-right: 10px;
+  float: left;
+  background-size: cover;
 }
 
 .title {
