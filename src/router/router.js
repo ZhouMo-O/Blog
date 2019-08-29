@@ -4,7 +4,6 @@ import blogList from '../components/blog/blogList';
 import showBlog from '../components/blog/showBlog';
 import blogManagerment from '../components/blogManagerment/managerment';
 import deleteBlog from '../components/blogManagerment/deleteBlog';
-import edit from '../components/blogManagerment/edit';
 
 
 export const routes = [{
@@ -28,10 +27,6 @@ export const routes = [{
             path: '/blogManagerment/sendBlog',
             name: 'sendBlog',
             component: sendBlog,
-        }, {
-            path: '/blogManagerment/edit',
-            name: 'edit',
-            component: edit
         }]
     },
     {

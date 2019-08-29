@@ -26,7 +26,7 @@
             <a class="nav-link" href="#">Life</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/blogManagerment">blogManagerment</a>
+            <router-link to="/blogManagerment" class="nav-link">blogManagerment</router-link>
           </li>
         </ul>
       </div>

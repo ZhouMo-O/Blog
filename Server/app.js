@@ -14,8 +14,8 @@ const urlencodedParser = bodyParser.urlencoded({
 })
 
 //让路由可以接收json数据
-
 app.use(express.json())
+app.use('/admin', express.static(__dirname + '/admin'))
 
 
 
@@ -29,33 +29,30 @@ app.all('*', function (req, res, next) {
     next();
 });
 
-app.get('/', (req, res) => {
-    res.send('test')
-})
-
 //blog
-app.post('/sendBlog', urlencodedParser, Api.sendBlog)
 
-app.get('/findAllBlog', Api.findAllBlog)
+app.post('/api/sendBlog', urlencodedParser, Api.sendBlog)
 
-app.get('/findBlog/:id', urlencodedParser, Api.findBlog)
+app.get('/api/findAllBlog', Api.findAllBlog)
 
-app.post('/deleteBlog/:id', urlencodedParser, Api.deleteBlog)
+app.get('/api/findBlog/:id', urlencodedParser, Api.findBlog)
 
-app.post('/Editblog/:id', urlencodedParser, Api.Editblog)
+app.post('/api/deleteBlog/:id', urlencodedParser, Api.deleteBlog)
+
+app.post('/api/Editblog/:id', urlencodedParser, Api.Editblog)
 
 //user
-app.post('/login',urlencodedParser,Api.userLogin);
+app.post('/api/login', urlencodedParser, Api.userLogin);
 
-app.post('/register',urlencodedParser,Api.userRegister);
+app.post('/api/register', urlencodedParser, Api.userRegister);
 
-app.get('/findUser',urlencodedParser,Api.findUser);
+app.get('/api/findUser', urlencodedParser, Api.findUser);
 
-app.get('/findOneUser',urlencodedParser,Api.findOneUser);
+app.get('/api/findOneUser', urlencodedParser, Api.findOneUser);
 //---------------------数据库服务--------------------------
 mongoose.connect('mongodb://localhost:27017/blog', {
         useNewUrlParser: true,
-        useCreateIndex:true
+        useCreateIndex: true
     })
     .then(() => {
         console.log('数据库连接成功')

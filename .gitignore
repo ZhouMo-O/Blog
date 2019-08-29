@@ -2,6 +2,7 @@
 node_modules
 /dist
 /DB
+/Server/admin
 
 # local env files
 .env.local

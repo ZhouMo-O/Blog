@@ -36,7 +36,7 @@ export default {
   },
   created() {
     this.axios
-      .get(`http://localhost:3333/findBlog/${this.id}`)
+      .get(`/findBlog/${this.id}`)
       .then(data => {
         this.blog = data.data;
         this.blog.date = this.blog.date.slice(0, 10);
