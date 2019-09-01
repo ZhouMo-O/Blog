@@ -15,7 +15,7 @@ const urlencodedParser = bodyParser.urlencoded({
 
 //让路由可以接收json数据
 app.use(express.json())
-app.use('/admin', express.static(__dirname + '/admin'))
+app.use('/', express.static(__dirname + '/admin'))
 
 
 
@@ -28,6 +28,7 @@ app.all('*', function (req, res, next) {
     res.header("Content-Type", "application/json;charset=utf-8");
     next();
 });
+
 
 //blog
 
