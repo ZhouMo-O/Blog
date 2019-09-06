@@ -6,7 +6,6 @@ const port = 3333;
 const Api = require('./Api/Api').BlogRouter;
 const history = require('connect-history-api-fallback');
 
-
 ///---------------------中间件--------------------------
 const jsonParser = bodyParser.json()
 const urlencodedParser = bodyParser.urlencoded({
@@ -15,6 +14,7 @@ const urlencodedParser = bodyParser.urlencoded({
 
 //让路由可以接收json数据
 app.use(express.json())
+
 app.use(history({
     htmlAcceptHeaders: ['text/html', 'application/xhtml+xml']
 }));
