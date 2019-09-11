@@ -10,7 +10,7 @@
             <router-link to="/blogManagerment/sendBlog" class="nav-link">博客发布</router-link>
           </li>
           <li>
-            <router-link to="/" class="nav-link">Home</router-link>
+            <router-link to="/blogManagerment/user" class="nav-link">用户管理</router-link>
           </li>
           <li>
             <router-link to="/" class="nav-link">Home</router-link>

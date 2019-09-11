@@ -1,5 +1,7 @@
 const express = require('express');
 const db = require('../db/db').blogDb;
+const user = require('../../model/user');
+const assert = require('http-assert');
 
 
 class BlogRouter {
@@ -63,28 +65,39 @@ class BlogRouter {
     }
 
     //user
-    static userLogin(req,res){
-        console.log(req.body);
-        let user = db.findOneUser(req.body.id);
-        res.json('login')
+    static async userLogin(req, res) {
+        let {
+            username,
+            password
+        } = req.body;
+        let AdminUser = await user.findOne({
+            username
+        })
+        if (!AdminUser) {
+            res.status(422).send({
+                message: '用户不存在'
+            })
+        }
+        // res.send(AdminUser);
     }
 
-    static userRegister(req,res){
-        console.log(req.body);
-        let user = db.
-        res.json('register');
+    static async userRegister(req, res) {
+        let model = await user.create(req.body);
+        res.send(model);
     }
 
-    static findUser(req,res){
-        console.log(req.body);
-        let user = db.findUser();
-        res.send(user);
-    }
+    static async findUser(req, res) {
+        let AdminUser = await user.find().limit(10);
+        res.send(AdminUser)
 
-    static findOneUser(req,res){
-        console.log(req.body);
-        let user = db.findOneUser(req.body.id);
-        res.send(user);
+    }
+    static async findOneUser(req, res) {
+        console.log(req.params.id);
+        let adminUser = await user.findOne({
+            _id: req.params.id
+        })
+        console.log(adminUser)
+        res.send(adminUser);
     }
 }
 

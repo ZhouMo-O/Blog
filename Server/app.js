@@ -9,7 +9,7 @@ const history = require('connect-history-api-fallback');
 ///---------------------中间件--------------------------
 const jsonParser = bodyParser.json()
 const urlencodedParser = bodyParser.urlencoded({
-    extended: false
+    extended: true
 })
 
 //让路由可以接收json数据
@@ -52,7 +52,7 @@ app.post('/api/register', urlencodedParser, Api.userRegister);
 
 app.get('/api/findUser', urlencodedParser, Api.findUser);
 
-app.get('/api/findOneUser', urlencodedParser, Api.findOneUser);
+app.get('/api/findOneUser/:id', urlencodedParser, Api.findOneUser);
 //---------------------数据库服务--------------------------
 mongoose.connect('mongodb://localhost:27017/blog', {
         useNewUrlParser: true,

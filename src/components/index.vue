@@ -11,7 +11,7 @@
 
 <script>
 import Mynav from "./head/nav";
-
+import Mybody from "./body/Mybody";
 export default {
   name: "Myindex",
   data() {
@@ -22,7 +22,8 @@ export default {
     };
   },
   components: {
-    Mynav
+    Mynav,
+    Mybody
   },
   methods: {
     timeCheck: function() {

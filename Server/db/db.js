@@ -54,24 +54,24 @@ class blogDb {
 
     }
 
-    static findUser(){
-        return user.find().then(data=>{
-            return data;
-        })
-        .catch(err=>{
-            console.err(err);
-        })
+    static findUser() {
+        return user.find().then(data => {
+                return data;
+            })
+            .catch(err => {
+                console.err(err);
+            })
     }
 
-    static findOneUser(id){
+    static findOneUser(id) {
         return user.find({
-            _id:id
-        }).then(data=>{
-            return data;
-        })
-        .catch(err=>{
-            console.err(err);
-        })
+                _id: id
+            }).then(data => {
+                return data;
+            })
+            .catch(err => {
+                console.err(err);
+            })
     }
 }
 
