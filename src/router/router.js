@@ -6,7 +6,9 @@ import blogList from '../components/blog/blogList';
 import showBlog from '../components/blog/showBlog';
 import blogManagerment from '../components/blogManagerment/managerment';
 import deleteBlog from '../components/blogManagerment/deleteBlog';
-import user from '../components/user/userEdit';
+import userEdit from '../components/user/userEdit';
+import userList from '../components/user/userList';
+import userLogin from '../components/user/login';
 Vue.use(Router)
 
 export default new Router({
@@ -14,6 +16,10 @@ export default new Router({
         path: '/',
         name: 'home',
         component: index
+    }, {
+        path: '/userLogin',
+        name: 'userLogin',
+        component: userLogin,
     }, {
         path: '/showBlog/:id',
         name: 'showBlog',
@@ -36,9 +42,18 @@ export default new Router({
             name: 'sendBlog',
             component: sendBlog,
         }, {
-            path: '/blogManagerment/user',
-            name: 'user',
-            component: user,
+            path: '/blogManagerment/userCreate',
+            name: 'userEdit',
+            component: userEdit,
+        }, {
+            path: '/blogManagerment/userEdit/:id',
+            props: true,
+            name: 'userEdit',
+            component: userEdit,
+        }, {
+            path: '/blogManagerment/userList',
+            name: 'userList',
+            component: userList,
         }]
     }]
 

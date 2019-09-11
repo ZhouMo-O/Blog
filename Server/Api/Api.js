@@ -2,7 +2,7 @@ const express = require('express');
 const db = require('../db/db').blogDb;
 const user = require('../../model/user');
 const assert = require('http-assert');
-
+const jwt = require('jsonwebtoken');
 
 class BlogRouter {
     //存储blog
@@ -65,20 +65,29 @@ class BlogRouter {
     }
 
     //user
-    static async userLogin(req, res) {
+    static async userLogin(req, res, next) {
         let {
             username,
             password
         } = req.body;
         let AdminUser = await user.findOne({
             username
-        })
+        }).select('+password')
         if (!AdminUser) {
             res.status(422).send({
                 message: '用户不存在'
             })
         }
-        // res.send(AdminUser);
+        const InVaild = require('bcrypt').compareSync(password, AdminUser.password);
+        if (!InVaild) {
+            res.status(422).send({
+                message: '密码错误'
+            })
+        }
+        const token = jwt.sign({
+            id: AdminUser._id
+        }, 'sometime')
+        res.end(token);
     }
 
     static async userRegister(req, res) {

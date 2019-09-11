@@ -34,6 +34,19 @@ axios.interceptors.request.use(function (config) {
   return Promise.reject(error);
 })
 
+axios.interceptors.response.use(res => {
+  return res //正常数据就返回
+}, err => {
+  if (err.response.data.message) {
+    Vue.prototype.$message({ //定义全局变量消息message，只要有err信息，那么就会触发这个message方法，就会给提示报错信息
+      type: 'error', //err风格
+      message: err.response.data.message //展示约定好的数据
+    })
+  }
+  return Promise.reject(err) //否则的话就正常的返回一个promise
+})
+
+
 //axios添加响应拦截器
 axios.interceptors.response.use(function (response) {
   return response;

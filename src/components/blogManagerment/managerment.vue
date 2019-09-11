@@ -10,10 +10,10 @@
             <router-link to="/blogManagerment/sendBlog" class="nav-link">博客发布</router-link>
           </li>
           <li>
-            <router-link to="/blogManagerment/user" class="nav-link">用户管理</router-link>
+            <router-link to="/blogManagerment/userCreate" class="nav-link">创建用户</router-link>
           </li>
           <li>
-            <router-link to="/" class="nav-link">Home</router-link>
+            <router-link to="/blogManagerment/userList" class="nav-link">用户列表</router-link>
           </li>
         </ul>
       </div>

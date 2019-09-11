@@ -15,6 +15,8 @@
     "elasticsearch": "^16.1.1",
     "element-ui": "^2.4.5",
     "express": "^4.17.1",
+    "http-assert": "^1.4.1",
+    "jsonwebtoken": "^8.5.1",
     "marked": "^0.7.0",
     "mavon-editor": "^2.7.5",
     "mongoose": "^5.6.0",
