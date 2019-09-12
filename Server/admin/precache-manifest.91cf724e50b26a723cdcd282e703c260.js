@@ -1,15 +1,15 @@
 self.__precacheManifest = [
   {
-    "revision": "2305c02818c4b1af07d2e9d49d0abb4f",
-    "url": "/img/yes.2305c028.svg"
+    "revision": "a078b2a5b4958499ff41cca33ba6f313",
+    "url": "/img/no.a078b2a5.svg"
   },
   {
     "revision": "b6216d61c03e6ce0c9aea6ca7808f7ca",
     "url": "/robots.txt"
   },
   {
-    "revision": "a078b2a5b4958499ff41cca33ba6f313",
-    "url": "/img/no.a078b2a5.svg"
+    "revision": "2305c02818c4b1af07d2e9d49d0abb4f",
+    "url": "/img/yes.2305c028.svg"
   },
   {
     "revision": "6849d9480bf447dcc159",
@@ -20,12 +20,12 @@ self.__precacheManifest = [
     "url": "/fonts/fontello.8d4a4e6f.woff2"
   },
   {
-    "revision": "e73a0647198cfe970de0f003be95cc51",
-    "url": "/fonts/fontello.e73a0647.eot"
-  },
-  {
     "revision": "a782baa8633b1359f9686ffad17e0d76",
     "url": "/fonts/fontello.a782baa8.woff"
+  },
+  {
+    "revision": "e73a0647198cfe970de0f003be95cc51",
+    "url": "/fonts/fontello.e73a0647.eot"
   },
   {
     "revision": "068ca2b316db98037bebdd1e4f1b9459",
@@ -44,12 +44,16 @@ self.__precacheManifest = [
     "url": "/img/edit.3e641495.svg"
   },
   {
-    "revision": "6a9824f4e44315db12c1",
-    "url": "/js/app.cea7fc63.js"
+    "revision": "f58aa6f821470c26fad3",
+    "url": "/js/app.877eb453.js"
   },
   {
     "revision": "6849d9480bf447dcc159",
     "url": "/js/chunk-vendors.8059fb12.js"
+  },
+  {
+    "revision": "d805e4775e6201b010e14c0548614bb4",
+    "url": "/img/read.d805e477.svg"
   },
   {
     "revision": "73f2266a479931e8cb24b096bfc0e2e9",
@@ -58,10 +62,6 @@ self.__precacheManifest = [
   {
     "revision": "9b1f86091278cd5f9b5a81bece633f18",
     "url": "/img/pinglun.9b1f8609.svg"
-  },
-  {
-    "revision": "d805e4775e6201b010e14c0548614bb4",
-    "url": "/img/read.d805e477.svg"
   },
   {
     "revision": "a23210a0bad811475255613b705e5087",
@@ -80,11 +80,11 @@ self.__precacheManifest = [
     "url": "/img/zaoshang.5a507c1e.jpg"
   },
   {
-    "revision": "d6eb04497b06f0ec339b3894a7a2c41a",
+    "revision": "8dcad418e8c5e98447cda3341395d248",
     "url": "/index.html"
   },
   {
-    "revision": "6a9824f4e44315db12c1",
-    "url": "/css/app.2ab13a5c.css"
+    "revision": "f58aa6f821470c26fad3",
+    "url": "/css/app.05526fb3.css"
   }
 ];
