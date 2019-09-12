@@ -37,13 +37,15 @@ export default {
 .articleBox {
   min-height: 200px;
   float: left;
-  margin-top: 100px;
+  margin-top: 50px;
   background: #ffffff;
-  /* border: 1px solid red; */
 }
 .center {
   /* border: 1px solid red; */
   background: #ffffff;
+  text-align: center;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .col-md-8 {

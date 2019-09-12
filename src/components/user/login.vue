@@ -46,4 +46,8 @@ export default {
   width: 25rem;
   margin: 5rem auto;
 }
+.login-container {
+  min-height: 1400px;
+  border: 1px solid red;
+}
 </style>

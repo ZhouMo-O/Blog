@@ -111,7 +111,6 @@ export default {
 
 /*第二层*/
 .center {
-  /* border: 1px solid red; */
   background: #ffffff;
 }
 
@@ -132,19 +131,19 @@ export default {
 .article {
   border: 1px solid #e3e3e5;
   border-radius: 3px;
-  height: 320px;
+  height: 270px;
   margin: 8px;
   padding: 5px;
   background: #fcfcfc;
   box-sizing: border-box;
-  box-shadow: 1px -5px 50px #dadde3;
+  box-shadow: 1px -5px 40px #dadde3;
   animation: learn 1s forwards;
 }
 
 /*文章图片大小*/
 .articleImg {
   width: 100%;
-  height: 60%;
+  height: 55%;
   display: block;
   /* border: 1px solid red; */
   background: url("../../assets/codeCover.png") no-repeat;
