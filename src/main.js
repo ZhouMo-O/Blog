@@ -1,6 +1,5 @@
 import Vue from 'vue';
 import App from './App.vue';
-
 import animated from 'animate.css'; // npm install animate.css --save安装，再引入
 import axios from 'axios';
 import qs from 'qs'
@@ -10,7 +9,6 @@ import router from './router/router' //路由
 import './plugins/element.js'
 
 
-
 //mavon markdown
 Vue.use(mavonEditor)
 
@@ -18,8 +16,7 @@ Vue.use(mavonEditor)
 Vue.prototype.axios = axios;
 Vue.prototype.HOST = '/api'
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'; // 配置请求头
-axios.defaults.baseURL = process.env.VUE_APP_URL || 'http://localhost:3333/api'
-
+axios.defaults.baseURL = process.env.VUE_APP_URL || 'api'
 //axios添加请求拦截器
 axios.interceptors.request.use(function (config) {
   config.headers['Content-Type'] = 'application/x-www-form-urlencoded'
