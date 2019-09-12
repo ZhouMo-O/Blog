@@ -12,6 +12,7 @@ import userLogin from '../components/user/login';
 Vue.use(Router)
 
 export default new Router({
+    mode: 'history',
     routes: [{
         path: '/',
         name: 'home',
@@ -56,5 +57,6 @@ export default new Router({
             component: userList,
         }]
     }]
+
 
 })
