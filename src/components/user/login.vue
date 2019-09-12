@@ -48,6 +48,6 @@ export default {
 }
 .login-container {
   min-height: 1400px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 </style>
