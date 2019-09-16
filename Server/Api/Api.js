@@ -66,6 +66,7 @@ class BlogRouter {
 
     //user
     static async userLogin(req, res, next) {
+        console.log(req.body)
         let {
             username,
             password
@@ -84,6 +85,7 @@ class BlogRouter {
                 message: '密码错误'
             })
         }
+
         const token = jwt.sign({
             id: AdminUser._id
         }, 'sometime')
@@ -108,6 +110,13 @@ class BlogRouter {
         console.log(adminUser)
         res.send(adminUser);
     }
+
+    static async errHandle(err, req, res, next) {
+        res.status(err.statusCode || 500).send({
+            message: err.message
+        })
+    }
+
 }
 
 module.exports.BlogRouter = BlogRouter;
