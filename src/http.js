@@ -12,7 +12,7 @@ axios.defaults.baseURL = process.env.VUE_APP_URL || '/api'
 //axios添加请求拦截器
 axios.interceptors.request.use(function (config) {
     if (localStorage.token) {
-        config.headers.Authorization = 'Bearer ' + localStorage.token
+        config.headers.authorization = 'Bearer ' + localStorage.token
     }
     return config;
 }, function (error) {

@@ -11,7 +11,7 @@ module.exports = options => {
 
         const {
             id
-        } = jwt.verify(token, req.app.get('secret'))
+        } = jwt.verify(token, 'sometime')
         if (!id) {
             res.status('401').send({
                 message: "你好，请先登陆"

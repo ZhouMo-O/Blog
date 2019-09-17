@@ -26,7 +26,7 @@ app.use(require('cors')())
 
 //blog
 
-app.post('/api/sendBlog', tokenVerify(), urlencodedParser, Api.sendBlog)
+app.post('/api/sendBlog', urlencodedParser, tokenVerify(), Api.sendBlog)
 
 app.get('/api/findAllBlog', Api.findAllBlog)
 
