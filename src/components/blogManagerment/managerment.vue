@@ -26,7 +26,28 @@
 
 <script>
 export default {
-  name: "blogManagement"
+  name: "blogManagement",
+  data() {
+    return {
+      model: {}
+    };
+  },
+  methods: {
+    authVerify() {
+      if (!localStorage.token) {
+        this.$router.push("/userLogin");
+        this.$message({
+          type: "error",
+          message: "请先登陆"
+        });
+      } else {
+        this.axios.post("/authVerify");
+      }
+    }
+  },
+  created() {
+    this.authVerify();
+  }
 };
 </script>
 

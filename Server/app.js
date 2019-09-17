@@ -45,6 +45,8 @@ app.get('/api/findUser', urlencodedParser, Api.findUser);
 
 app.get('/api/findOneUser/:id', urlencodedParser, Api.findOneUser);
 
+app.post('/api/authVerify', tokenVerify(), urlencodedParser, Api.authVerify);
+
 app.use(Api.errHandle)
 //---------------------数据库服务--------------------------
 mongoose.connect('mongodb://localhost:27017/blog', {
