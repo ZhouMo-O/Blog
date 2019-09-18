@@ -56,6 +56,9 @@ export default new Router({
             name: 'userList',
             component: userList,
         }]
+    }, {
+        path: '*',
+        component: index
     }]
 
 

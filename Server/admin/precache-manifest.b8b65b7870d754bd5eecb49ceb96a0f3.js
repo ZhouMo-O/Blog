@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/fonts/element-icons.732389de.ttf"
   },
   {
-    "revision": "c99668ecb3d6b303cfe4",
+    "revision": "f22cd6ba319277aefb86",
     "url": "/css/app.4a9c9933.css"
   },
   {
@@ -40,12 +40,12 @@ self.__precacheManifest = [
     "url": "/img/del.8f3de2ae.svg"
   },
   {
-    "revision": "2305c02818c4b1af07d2e9d49d0abb4f",
-    "url": "/img/yes.2305c028.svg"
-  },
-  {
     "revision": "3e641495c45c74c7caafb86323416724",
     "url": "/img/edit.3e641495.svg"
+  },
+  {
+    "revision": "2305c02818c4b1af07d2e9d49d0abb4f",
+    "url": "/img/yes.2305c028.svg"
   },
   {
     "revision": "a078b2a5b4958499ff41cca33ba6f313",
@@ -72,15 +72,15 @@ self.__precacheManifest = [
     "url": "/fonts/element-icons.535877f5.woff"
   },
   {
-    "revision": "c99668ecb3d6b303cfe4",
-    "url": "/js/app.78293e55.js"
+    "revision": "f22cd6ba319277aefb86",
+    "url": "/js/app.26919a56.js"
   },
   {
     "revision": "5a507c1e75c7f8455de9021c94ac68e5",
     "url": "/img/zaoshang.5a507c1e.jpg"
   },
   {
-    "revision": "9cba93d384f5ea6ebb0fb3f6dba355ee",
+    "revision": "587b1baca3299070e90418226605e541",
     "url": "/index.html"
   },
   {
@@ -100,16 +100,20 @@ self.__precacheManifest = [
     "url": "/assets/waifu.min.css"
   },
   {
-    "revision": "04dac07d248f0cf0ed460b606e62e75b",
-    "url": "/assets/waifu-tips.js"
+    "revision": "ffc6ede02a31ec3b6990bfa29c64fdd6",
+    "url": "/assets/flat-ui-icons-regular.svg"
+  },
+  {
+    "revision": "42f85d5300f70c34524ac3092fb244ab",
+    "url": "/assets/waifu-tips.json"
   },
   {
     "revision": "ac9cce151c9384d0da1953fa4d69a088",
     "url": "/assets/waifu-tips.min.js"
   },
   {
-    "revision": "42f85d5300f70c34524ac3092fb244ab",
-    "url": "/assets/waifu-tips.json"
+    "revision": "04dac07d248f0cf0ed460b606e62e75b",
+    "url": "/assets/waifu-tips.js"
   },
   {
     "revision": "b82606b349484ab6b696144862b18b5a",
@@ -132,15 +136,15 @@ self.__precacheManifest = [
     "url": "/assets/flat-ui-icons-regular.woff"
   },
   {
-    "revision": "ffc6ede02a31ec3b6990bfa29c64fdd6",
-    "url": "/assets/flat-ui-icons-regular.svg"
-  },
-  {
     "revision": "f1d025e1d5dc1b25678397fcf6ae70d7",
     "url": "/assets/flat-ui-icons-regular.eot"
   },
   {
     "revision": "44754ef5258206ab2bacb3e04c7de3c4",
     "url": "/assets/autoload.js"
+  },
+  {
+    "revision": "e72425a918719ed380ea3f608bb50842",
+    "url": "/Ico.ico"
   }
 ];
