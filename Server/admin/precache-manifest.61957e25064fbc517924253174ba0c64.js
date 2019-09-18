@@ -24,12 +24,12 @@ self.__precacheManifest = [
     "url": "/fonts/fontello.e73a0647.eot"
   },
   {
-    "revision": "a782baa8633b1359f9686ffad17e0d76",
-    "url": "/fonts/fontello.a782baa8.woff"
-  },
-  {
     "revision": "068ca2b316db98037bebdd1e4f1b9459",
     "url": "/fonts/fontello.068ca2b3.ttf"
+  },
+  {
+    "revision": "a782baa8633b1359f9686ffad17e0d76",
+    "url": "/fonts/fontello.a782baa8.woff"
   },
   {
     "revision": "9354499c2824248511adf85fdf8e4c37",
@@ -40,24 +40,24 @@ self.__precacheManifest = [
     "url": "/img/del.8f3de2ae.svg"
   },
   {
-    "revision": "3e641495c45c74c7caafb86323416724",
-    "url": "/img/edit.3e641495.svg"
-  },
-  {
     "revision": "2305c02818c4b1af07d2e9d49d0abb4f",
     "url": "/img/yes.2305c028.svg"
+  },
+  {
+    "revision": "3e641495c45c74c7caafb86323416724",
+    "url": "/img/edit.3e641495.svg"
   },
   {
     "revision": "a078b2a5b4958499ff41cca33ba6f313",
     "url": "/img/no.a078b2a5.svg"
   },
   {
-    "revision": "9b1f86091278cd5f9b5a81bece633f18",
-    "url": "/img/pinglun.9b1f8609.svg"
-  },
-  {
     "revision": "d805e4775e6201b010e14c0548614bb4",
     "url": "/img/read.d805e477.svg"
+  },
+  {
+    "revision": "9b1f86091278cd5f9b5a81bece633f18",
+    "url": "/img/pinglun.9b1f8609.svg"
   },
   {
     "revision": "73f2266a479931e8cb24b096bfc0e2e9",
@@ -88,32 +88,28 @@ self.__precacheManifest = [
     "url": "/robots.txt"
   },
   {
-    "revision": "f1d025e1d5dc1b25678397fcf6ae70d7",
-    "url": "/assets/flat-ui-icons-regular.eot"
-  },
-  {
-    "revision": "6d3a6bce02a9404bc3d331f7482f597c",
-    "url": "/assets/waifu.min.css"
-  },
-  {
     "revision": "71b22c7da4697bc0680e3f603929faba",
     "url": "/assets/flat-ui-icons-regular.ttf"
-  },
-  {
-    "revision": "066c11781416af8664adc3206d9ee661",
-    "url": "/assets/waifu-tips.json"
-  },
-  {
-    "revision": "ac9cce151c9384d0da1953fa4d69a088",
-    "url": "/assets/waifu-tips.min.js"
   },
   {
     "revision": "849d622a5133ce67a5ba8194f238ab8e",
     "url": "/assets/waifu.css"
   },
   {
-    "revision": "4632a3c15d6835a54e558454d40d1fdb",
+    "revision": "6d3a6bce02a9404bc3d331f7482f597c",
+    "url": "/assets/waifu.min.css"
+  },
+  {
+    "revision": "04dac07d248f0cf0ed460b606e62e75b",
     "url": "/assets/waifu-tips.js"
+  },
+  {
+    "revision": "ac9cce151c9384d0da1953fa4d69a088",
+    "url": "/assets/waifu-tips.min.js"
+  },
+  {
+    "revision": "42f85d5300f70c34524ac3092fb244ab",
+    "url": "/assets/waifu-tips.json"
   },
   {
     "revision": "b82606b349484ab6b696144862b18b5a",
@@ -140,7 +136,11 @@ self.__precacheManifest = [
     "url": "/assets/flat-ui-icons-regular.svg"
   },
   {
-    "revision": "9dee6e4a60773314b6a689dd673418c2",
+    "revision": "f1d025e1d5dc1b25678397fcf6ae70d7",
+    "url": "/assets/flat-ui-icons-regular.eot"
+  },
+  {
+    "revision": "44754ef5258206ab2bacb3e04c7de3c4",
     "url": "/assets/autoload.js"
   }
 ];
