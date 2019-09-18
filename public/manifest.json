@@ -2,12 +2,12 @@
   "name": "blog",
   "short_name": "blog",
   "icons": [{
-      "src": "./img/icons/Icon.png",
+      "src": "./Icon",
       "sizes": "128x128",
       "type": "image/png"
     },
     {
-      "src": "./img/icons/Icon.png",
+      "src": "./Icon",
       "sizes": "128x128",
       "type": "image/png"
     }
