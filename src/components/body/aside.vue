@@ -1,16 +1,9 @@
 <template>
   <aside class="col-md-3">
-    <input type="text" v-model="search" placehoder="搜索" />
-    <div>公告栏也在这里</div>
-    <div>此处Seo</div>
-    <div>关键词：</div>
-    <div>blog 个人博客，个人网站等关键词收录</div>
-    <div>排名白帽优化</div>
-    <p>友情链接也在这里</p>
-    <p>云标签</p>
-    <p>hotBlog 阅读排名 点赞排名 留言排名</p>
-    <p>推荐阅读</p>
-    <p>最新更新</p>
+    <div class="an">
+      <h5>公告</h5>
+      <div>正在施工</div>
+    </div>
   </aside>
 </template>
 
@@ -54,5 +47,9 @@ export default {
   .col-md-8 {
     margin-left: 0 !important;
   }
+}
+.an {
+  margin: 5px;
+  border-bottom: 1px solid #e3e3e6;
 }
 </style>

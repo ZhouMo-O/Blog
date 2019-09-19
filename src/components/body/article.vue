@@ -83,6 +83,10 @@ export default {
     position: relative;
     top: 0;
   }
+  20% {
+    position: relative;
+    top: 2px;
+  }
   to {
     position: relative;
     top: -10px;
@@ -96,9 +100,9 @@ export default {
     position: relative;
     top: -10px;
   }
-  40% {
+  20% {
     position: relative;
-    top: 0;
+    top: 0px;
   }
   100% {
     box-shadow: 1px -5px 10px #e7eaed;
@@ -118,7 +122,7 @@ export default {
 .col-md-8 {
   float: left;
   margin-left: 3.1vw !important;
-  border: 1px solid #e3e3e5;
+  /* border: 1px solid #e3e3e5; */
   background: #ffffff;
 }
 
