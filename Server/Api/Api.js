@@ -3,6 +3,7 @@ const db = require('../db/db').blogDb;
 const user = require('../../model/user');
 const assert = require('http-assert');
 const jwt = require('jsonwebtoken');
+const multer = require('multer')
 
 class BlogRouter {
     //存储blog
@@ -121,7 +122,6 @@ class BlogRouter {
             message: err.message
         })
     }
-
 }
 
 module.exports.BlogRouter = BlogRouter;

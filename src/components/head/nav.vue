@@ -25,9 +25,9 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Life</a>
           </li>
-          <!-- <li class="nav-item">
+          <li class="nav-item">
             <router-link to="/blogManagerment" class="nav-link">blogManagerment</router-link>
-          </li>-->
+          </li>
           <li class="nav-item">
             <router-link to="/userLogin" class="nav-link">login</router-link>
           </li>
@@ -39,7 +39,15 @@
 
 <script>
 export default {
-  name: "Mynav"
+  name: "Mynav",
+  data() {
+    return {
+      model: {}
+    };
+  },
+  created() {
+    console.log(localStorage.token);
+  }
 };
 </script>
 

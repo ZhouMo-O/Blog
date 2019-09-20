@@ -47,7 +47,19 @@ app.get('/api/findOneUser/:id', urlencodedParser, Api.findOneUser);
 
 app.post('/api/authVerify', tokenVerify(), urlencodedParser, Api.authVerify);
 
-app.use(Api.errHandle)
+//文件上传
+const multer = require('multer');
+const upload = multer({
+    dist: __dirname + './upload'
+})
+app.use('/uploads', express.static(__dirname + './uploads'));
+
+app.post('./api/upload', upload.single('file'), async (req, res) => {
+    const file = req.file;
+    file.url = `http://localhost:3333/upload/${file.filename}`
+    res.send(file);
+})
+
 //---------------------数据库服务--------------------------
 mongoose.connect('mongodb://localhost:27017/blog', {
         useNewUrlParser: true,

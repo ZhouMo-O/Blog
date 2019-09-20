@@ -31,10 +31,9 @@ export default {
     this.axios
       .get("/findAllBlog")
       .then(data => {
-        console.log(data.data);
         data.data.ok = true;
         this.blogData = data.data;
-        console.log(data.data);
+        console.log(this.blogData);
       })
       .catch(err => {
         console.log(err);

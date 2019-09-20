@@ -11,7 +11,9 @@
         <div class="article_title">
           <h3>
             <!-- 标题 -->
-            <a href="#">{{blog.title.length>10?blog.title.slice(0,10)+'...':blog.title}}</a>
+            <router-link
+              v-bind:to="'/showBlog/'+blog._id"
+            >{{blog.title.length>10?blog.title.slice(0,10)+'...':blog.title}}</router-link>
           </h3>
           <!-- 文章简介 -->
           <p>{{blog.Intro.length>10?blog.Intro.slice(0,20)+'...':blog.Intro}}</p>
