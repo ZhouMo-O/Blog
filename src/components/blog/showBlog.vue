@@ -12,12 +12,12 @@
 
         <span class="like">
           <span class="likeIcon"></span>
-          <span class="like_number">:{{blog.read}}</span>
+          <span class="like_number">:{{blog.like}}</span>
         </span>
 
         <span class="comment">
           <span class="commentIcon"></span>
-          <span class="comment_number">:{{blog.read}}</span>
+          <span class="comment_number">:{{blog.comment.length-1}}</span>
         </span>
       </div>
     </div>
@@ -110,6 +110,8 @@ export default {
   height: 20px;
   display: block;
   float: left;
+  position: relative;
+  bottom: 1px;
   background: url("../../assets/like.svg") no-repeat;
   background-size: cover;
 }

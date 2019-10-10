@@ -2,6 +2,7 @@
 node_modules
 /dist
 /DB
+/dump
 # /Server/admin
 
 # local env files

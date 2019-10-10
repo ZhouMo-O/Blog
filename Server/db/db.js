@@ -26,9 +26,15 @@ class blogDb {
     }
     //查找一个博客
     static findBlog(id) {
+        let op = 1;
         return db.findOne({
-            _id: id
-        })
+                _id: id
+            })
+            .then(data => {
+                data.read = ++data.read;
+                console.log(++op)
+                return data.save()
+            })
     }
     //删除一个博客
     static deleteOneBlog(id) {
