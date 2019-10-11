@@ -112,6 +112,23 @@ class BlogRouter {
         res.send(adminUser);
     }
 
+    static async EditUser(req, res) {
+        console.log(req.body)
+        let Adminuser = await user.findByIdAndUpdate(
+            req.params.id,
+            req.body
+        )
+        if (Adminuser) {
+            res.status(200).send({
+                message: '修改密码成功'
+            })
+        } else {
+            res.status(401).send({
+                message: '修改密码失败'
+            })
+        }
+    }
+
     static async authVerify(req, res) {
         console.log('权限校验') //在外部我已经挂载了一个权限校验的中间件，所以权限校验甚至可以通过请求别的带有权限校验中间件的Api去实现，但是为了Api更加的合理，可读，
         //我才又写了一个Api即使这个Api里就一个console但是别人看起来就知道这个是用来给前端做权限验证的Api，而且后续也可以增加别的功能

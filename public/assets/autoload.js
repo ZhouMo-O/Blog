@@ -25,6 +25,7 @@ try {
     live2d_settings['homePageUrl'] = '/'; // 主页地址，可选 'auto'(自动), '{URL 网址}'
     live2d_settings['aboutPageUrl'] = 'http://www.blog5.net.cn'; // 关于页地址, '{URL 网址}'
     live2d_settings['waifuDraggableRevert'] = true; // 松开鼠标还原拖拽位置，可选 true(真), false(假)
+    live2d_settings['waifuSize'] = '280x250';
 
     /* 在 initModel 前添加 */
     initModel('assets/waifu-tips.json');

@@ -28,7 +28,7 @@ export default {
     async login() {
       const res = await this.axios.post("/login", this.model);
       //sessionStorage.token = res.data.token;  //浏览器关闭token失效
-      localStorage.token = res.data; //浏览器关闭后token依然有效
+      sessionStorage.token = res.data; //浏览器关闭后token依然有效
       this.$router.push("/blogManagerment/deleteBlog");
       this.$message({
         type: "success",

@@ -29,11 +29,23 @@ export default {
     async fetch() {
       let user = await this.axios.get(`/findOneUser/${this.id}`);
       this.model = user.data;
-      console.log(user);
     },
     async save() {
-      console.log(this.model);
-      let res = await this.axios.post("/register", this.model);
+      if (this.id) {
+        let res = await this.axios.put(`/editUser/${this.id}`, this.model);
+        this.$router.push("/blogManagerment/userList");
+        this.$message({
+          type: "success",
+          message: res.data.message
+        });
+      } else {
+        let res = await this.axios.post("/register/", this.model);
+        this.$router.push("/blogManagerment/userList");
+        this.$message({
+          type: "success",
+          message: "注册用户成功"
+        });
+      }
     }
   },
   created() {
