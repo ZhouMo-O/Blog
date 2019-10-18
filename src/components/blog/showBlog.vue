@@ -17,15 +17,19 @@
 
         <span class="comment">
           <span class="commentIcon"></span>
-          <span class="comment_number">:{{blog.comment.length-1}}</span>
+          <span class="comment_number">:{{blog.comment}}</span>
         </span>
       </div>
     </div>
-    <div v-html="blog.markdown" class="ql-editor markdown-body articles"></div>
+    <div class="markdown-body articles">
+      <div v-html="blog.markdown" class="ql-editor"></div>
+    </div>
+    <VueEditor style="display:none"></VueEditor>
   </div>
 </template>
 
 <script>
+import { VueEditor } from "vue2-editor";
 export default {
   name: "showBlog",
   data() {
@@ -34,12 +38,16 @@ export default {
       blog: {}
     };
   },
+  components: {
+    VueEditor
+  },
   created() {
     this.axios
       .get(`/findBlog/${this.id}`)
       .then(data => {
         this.blog = data.data;
         this.blog.date = this.blog.date.slice(0, 10);
+        this.blog.comment = this.blog.comment.length - 1;
       })
       .catch(err => {
         console.log(err);
