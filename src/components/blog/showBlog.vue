@@ -21,7 +21,7 @@
         </span>
       </div>
     </div>
-    <div v-html="blog.markdown" class="markdown-body articles"></div>
+    <div v-html="blog.markdown" class="ql-editor markdown-body articles"></div>
   </div>
 </template>
 
