@@ -5,11 +5,14 @@ import mavonEditor from 'mavon-editor' //编辑器
 import 'mavon-editor/dist/css/index.css'
 import router from './router/router' //路由
 import './plugins/element.js'
-
+import {
+  VueEditor
+} from "vue2-editor";
 
 //mavon markdown
 Vue.use(mavonEditor)
 Vue.use(animated)
+Vue.use(VueEditor)
 Vue.config.productionTip = false
 
 import http from './http'

@@ -32,7 +32,9 @@ export default {
       this.items = res.data;
       console.log(this.items);
     },
-    remove(row) {}
+    remove(row) {
+      console.log(row);
+    }
   },
   created() {
     this.fetch();
