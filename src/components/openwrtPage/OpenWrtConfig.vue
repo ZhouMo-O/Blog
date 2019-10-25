@@ -27,12 +27,12 @@ export default {
     };
   },
   methods: {
-    // async fetch() {
-    //   let config = await this.axios.get(`/getOpenWrtConfig`);
-    //   this.model = config.data[0];
-    // },
+    async fetch() {
+      let config = await this.axios.get(`/getOpenWrtConfig`);
+      this.model = config.data[0];
+    },
     async save() {
-      if (this.model == "") {
+      if (this.model._id) {
         let res = await this.axios.put(
           `/putOpenWrtConfig/${this.model._id}`,
           this.model
