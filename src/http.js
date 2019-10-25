@@ -8,7 +8,7 @@ import qs from 'qs'
 Vue.prototype.axios = axios;
 Vue.prototype.HOST = '/api'
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'; // 配置请求头
-axios.defaults.baseURL = process.env.VUE_APP_URL || '/api'
+axios.defaults.baseURL = process.env.VUE_APP_URL || '/api' //http://localhost:3333/api
 //axios添加请求拦截器
 axios.interceptors.request.use(function (config) {
     if (localStorage.token) {

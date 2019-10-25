@@ -23,14 +23,16 @@ export default {
   name: "OpenWrtConfig",
   data() {
     return {
-      model: {}
+      model: {
+        ss: "",
+        kcp: ""
+      }
     };
   },
   methods: {
     async fetch() {
       let config = await this.axios.get(`/getOpenWrtConfig`);
       this.model = config.data[0];
-      console.log(this.model._id);
     },
     async save() {
       if (this.model != "") {
