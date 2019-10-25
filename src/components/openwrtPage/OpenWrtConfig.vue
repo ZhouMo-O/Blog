@@ -32,7 +32,7 @@ export default {
     //   this.model = config.data[0];
     // },
     async save() {
-      if (this.model != "") {
+      if (this.model == "") {
         let res = await this.axios.put(
           `/putOpenWrtConfig/${this.model._id}`,
           this.model
