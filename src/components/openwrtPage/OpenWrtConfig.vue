@@ -23,10 +23,7 @@ export default {
   name: "OpenWrtConfig",
   data() {
     return {
-      model: {
-        ss: "",
-        kcp: ""
-      }
+      model: {}
     };
   },
   methods: {

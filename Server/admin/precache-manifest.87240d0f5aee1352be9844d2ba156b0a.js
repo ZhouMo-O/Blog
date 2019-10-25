@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/fonts/element-icons.732389de.ttf"
   },
   {
-    "revision": "6e9bd64005a036f65ac8",
+    "revision": "e4b4715f48b75c09eda5",
     "url": "/css/app.80bd2ad8.css"
   },
   {
@@ -40,47 +40,47 @@ self.__precacheManifest = [
     "url": "/fonts/fontello.e73a0647.eot"
   },
   {
-    "revision": "068ca2b316db98037bebdd1e4f1b9459",
-    "url": "/fonts/fontello.068ca2b3.ttf"
-  },
-  {
     "revision": "a782baa8633b1359f9686ffad17e0d76",
     "url": "/fonts/fontello.a782baa8.woff"
+  },
+  {
+    "revision": "068ca2b316db98037bebdd1e4f1b9459",
+    "url": "/fonts/fontello.068ca2b3.ttf"
   },
   {
     "revision": "9354499c2824248511adf85fdf8e4c37",
     "url": "/img/fontello.9354499c.svg"
   },
   {
-    "revision": "3e641495c45c74c7caafb86323416724",
-    "url": "/img/edit.3e641495.svg"
-  },
-  {
     "revision": "8f3de2ae84aab559aa828e06956c587f",
     "url": "/img/del.8f3de2ae.svg"
-  },
-  {
-    "revision": "a078b2a5b4958499ff41cca33ba6f313",
-    "url": "/img/no.a078b2a5.svg"
   },
   {
     "revision": "2305c02818c4b1af07d2e9d49d0abb4f",
     "url": "/img/yes.2305c028.svg"
   },
   {
+    "revision": "3e641495c45c74c7caafb86323416724",
+    "url": "/img/edit.3e641495.svg"
+  },
+  {
+    "revision": "a078b2a5b4958499ff41cca33ba6f313",
+    "url": "/img/no.a078b2a5.svg"
+  },
+  {
     "revision": "535877f50039c0cb49a6196a5b7517cd",
     "url": "/fonts/element-icons.535877f5.woff"
   },
   {
-    "revision": "6e9bd64005a036f65ac8",
-    "url": "/js/app.e6593819.js"
+    "revision": "e4b4715f48b75c09eda5",
+    "url": "/js/app.cb1ee95e.js"
   },
   {
     "revision": "5a507c1e75c7f8455de9021c94ac68e5",
     "url": "/img/zaoshang.5a507c1e.jpg"
   },
   {
-    "revision": "e74e1799673409d4c594766dd526762d",
+    "revision": "aedfe32cddfe275af7191384ca213710",
     "url": "/index.html"
   },
   {
@@ -88,8 +88,8 @@ self.__precacheManifest = [
     "url": "/robots.txt"
   },
   {
-    "revision": "f1d025e1d5dc1b25678397fcf6ae70d7",
-    "url": "/assets/flat-ui-icons-regular.eot"
+    "revision": "71b22c7da4697bc0680e3f603929faba",
+    "url": "/assets/flat-ui-icons-regular.ttf"
   },
   {
     "revision": "849d622a5133ce67a5ba8194f238ab8e",
@@ -104,16 +104,8 @@ self.__precacheManifest = [
     "url": "/assets/flat-ui-icons-regular.svg"
   },
   {
-    "revision": "c15b1008dec3c8967ea657a7bb4baaec",
-    "url": "/assets/jquery-ui.min.js"
-  },
-  {
     "revision": "ac9cce151c9384d0da1953fa4d69a088",
     "url": "/assets/waifu-tips.min.js"
-  },
-  {
-    "revision": "4af772ebedff81ae0580babc8a6e7a19",
-    "url": "/assets/live2d.js"
   },
   {
     "revision": "42f85d5300f70c34524ac3092fb244ab",
@@ -128,16 +120,24 @@ self.__precacheManifest = [
     "url": "/assets/live2d.min.js"
   },
   {
+    "revision": "4af772ebedff81ae0580babc8a6e7a19",
+    "url": "/assets/live2d.js"
+  },
+  {
     "revision": "a09e13ee94d51c524b7e2a728c7d4039",
     "url": "/assets/jquery.min.js"
+  },
+  {
+    "revision": "c15b1008dec3c8967ea657a7bb4baaec",
+    "url": "/assets/jquery-ui.min.js"
   },
   {
     "revision": "b850ecca5ab51e9035e6a36eb33b421a",
     "url": "/assets/flat-ui-icons-regular.woff"
   },
   {
-    "revision": "71b22c7da4697bc0680e3f603929faba",
-    "url": "/assets/flat-ui-icons-regular.ttf"
+    "revision": "f1d025e1d5dc1b25678397fcf6ae70d7",
+    "url": "/assets/flat-ui-icons-regular.eot"
   },
   {
     "revision": "dfa553ac2f6ae7b6f9f4ccf74b4a5da2",
