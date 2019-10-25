@@ -53,7 +53,7 @@ export default {
     }
   },
   created() {
-    // this.fetch();
+    this.fetch();
   }
 };
 </script>
