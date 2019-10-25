@@ -30,10 +30,10 @@ export default {
     };
   },
   methods: {
-    async fetch() {
-      let config = await this.axios.get(`/getOpenWrtConfig`);
-      this.model = config.data[0];
-    },
+    // async fetch() {
+    //   let config = await this.axios.get(`/getOpenWrtConfig`);
+    //   this.model = config.data[0];
+    // },
     async save() {
       if (this.model != "") {
         let res = await this.axios.put(
@@ -56,7 +56,7 @@ export default {
     }
   },
   created() {
-    this.fetch();
+    // this.fetch();
   }
 };
 </script>
