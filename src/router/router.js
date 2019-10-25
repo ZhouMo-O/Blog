@@ -9,6 +9,7 @@ import deleteBlog from '../components/blogManagerment/deleteBlog';
 import userEdit from '../components/user/userEdit';
 import userList from '../components/user/userList';
 import userLogin from '../components/user/login';
+import OpenWrtConfig from '../components/openwrtPage/OpenWrtConfig';
 Vue.use(Router)
 
 export default new Router({
@@ -49,12 +50,16 @@ export default new Router({
         }, {
             path: '/blogManagerment/userEdit/:id',
             props: true,
-            name: 'userEdit',
+            name: 'userId',
             component: userEdit,
         }, {
             path: '/blogManagerment/userList',
             name: 'userList',
             component: userList,
+        }, {
+            path: '/OpenWrtConfig',
+            name: 'OpenWrtConfig',
+            component: OpenWrtConfig
         }]
     }, {
         path: '*',

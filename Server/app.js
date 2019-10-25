@@ -55,12 +55,18 @@ const upload = multer({
 })
 app.use('/uploads', express.static(__dirname + './uploads'));
 
-app.post('./api/upload', upload.single('file'), async (req, res) => {
+app.post('/api/upload', upload.single('file'), async (req, res) => {
     const file = req.file;
     file.url = `http://localhost:3333/upload/${file.filename}`
     res.send(file);
 })
 
+//openwrt
+app.post('/api/openWrtEdit', urlencodedParser, Api.openWrtEdit)
+
+app.get('/api/getOpenWrtConfig', Api.getOpenWrtConfig);
+
+app.put('/api/putOpenWrtConfig/:id', Api.putOpenWrtConfig);
 //---------------------数据库服务--------------------------
 mongoose.connect('mongodb://localhost:27017/blog', {
         useNewUrlParser: true,

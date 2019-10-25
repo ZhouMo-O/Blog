@@ -1,6 +1,7 @@
 const express = require('express');
 const db = require('../db/db').blogDb;
 const user = require('../../model/user');
+const openWrt = require('../../model/oepnwrt');
 const assert = require('http-assert');
 const jwt = require('jsonwebtoken');
 const multer = require('multer')
@@ -138,6 +139,36 @@ class BlogRouter {
         res.status(err.statusCode || 500).send({
             message: err.message
         })
+    }
+
+    //openwrt
+    static async openWrtEdit(req, res) {
+        console.log(req.body);
+        let model = await openWrt.create(req.body);
+        res.send(model);
+
+    }
+
+    static async getOpenWrtConfig(req, res) {
+        let config = await openWrt.find({})
+        res.send(config)
+    }
+
+    static async putOpenWrtConfig(req, res) {
+        console.log(req.body)
+        let Adminuser = await openWrt.findByIdAndUpdate(
+            req.params.id,
+            req.body
+        )
+        if (Adminuser) {
+            res.status(200).send({
+                message: '修改配置文件成功'
+            })
+        } else {
+            res.status(401).send({
+                message: '修改配置文件失败'
+            })
+        }
     }
 }
 
