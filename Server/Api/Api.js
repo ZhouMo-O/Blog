@@ -151,7 +151,7 @@ class BlogRouter {
 
     static async getOpenWrtConfig(req, res) {
         let config = await openWrt.find({})
-        res.send(config)
+        res.json(config[0])
     }
 
     static async putOpenWrtConfig(req, res) {
