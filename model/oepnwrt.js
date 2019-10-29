@@ -1,14 +1,27 @@
 const mongoose = require('mongoose');
 const Schema = new mongoose.Schema({
-    ss: {
+    server: {
         type: String,
-        default: null
     },
-    kcp: {
+    server_port: {
+        type: Number,
+    },
+    passport: {
         type: String,
-        default: null
+    },
+    method: {
+        type: String,
+    },
+    local_address: {
+        type: String,
+    },
+    timeout: {
+        type: Number,
+    },
+    reuser_port: {
+        type: Boolean,
+        default: true
     }
-
 })
 
 
