@@ -36,12 +36,12 @@ self.__precacheManifest = [
     "url": "/fonts/fontello.8d4a4e6f.woff2"
   },
   {
-    "revision": "a782baa8633b1359f9686ffad17e0d76",
-    "url": "/fonts/fontello.a782baa8.woff"
-  },
-  {
     "revision": "e73a0647198cfe970de0f003be95cc51",
     "url": "/fonts/fontello.e73a0647.eot"
+  },
+  {
+    "revision": "a782baa8633b1359f9686ffad17e0d76",
+    "url": "/fonts/fontello.a782baa8.woff"
   },
   {
     "revision": "068ca2b316db98037bebdd1e4f1b9459",
@@ -52,16 +52,16 @@ self.__precacheManifest = [
     "url": "/img/fontello.9354499c.svg"
   },
   {
-    "revision": "3e641495c45c74c7caafb86323416724",
-    "url": "/img/edit.3e641495.svg"
-  },
-  {
     "revision": "8f3de2ae84aab559aa828e06956c587f",
     "url": "/img/del.8f3de2ae.svg"
   },
   {
     "revision": "2305c02818c4b1af07d2e9d49d0abb4f",
     "url": "/img/yes.2305c028.svg"
+  },
+  {
+    "revision": "3e641495c45c74c7caafb86323416724",
+    "url": "/img/edit.3e641495.svg"
   },
   {
     "revision": "a078b2a5b4958499ff41cca33ba6f313",
@@ -104,12 +104,12 @@ self.__precacheManifest = [
     "url": "/assets/flat-ui-icons-regular.svg"
   },
   {
-    "revision": "42f85d5300f70c34524ac3092fb244ab",
-    "url": "/assets/waifu-tips.json"
-  },
-  {
     "revision": "ac9cce151c9384d0da1953fa4d69a088",
     "url": "/assets/waifu-tips.min.js"
+  },
+  {
+    "revision": "42f85d5300f70c34524ac3092fb244ab",
+    "url": "/assets/waifu-tips.json"
   },
   {
     "revision": "835245d3e9c21e09c369f0e0a71938b6",
