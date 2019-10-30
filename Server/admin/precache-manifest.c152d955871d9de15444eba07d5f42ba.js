@@ -16,16 +16,16 @@ self.__precacheManifest = [
     "url": "/js/chunk-vendors.947d652b.js"
   },
   {
-    "revision": "9b1f86091278cd5f9b5a81bece633f18",
-    "url": "/img/pinglun.9b1f8609.svg"
+    "revision": "d805e4775e6201b010e14c0548614bb4",
+    "url": "/img/read.d805e477.svg"
   },
   {
     "revision": "73f2266a479931e8cb24b096bfc0e2e9",
     "url": "/img/like.73f2266a.svg"
   },
   {
-    "revision": "d805e4775e6201b010e14c0548614bb4",
-    "url": "/img/read.d805e477.svg"
+    "revision": "9b1f86091278cd5f9b5a81bece633f18",
+    "url": "/img/pinglun.9b1f8609.svg"
   },
   {
     "revision": "a23210a0bad811475255613b705e5087",
@@ -40,12 +40,12 @@ self.__precacheManifest = [
     "url": "/fonts/fontello.e73a0647.eot"
   },
   {
-    "revision": "068ca2b316db98037bebdd1e4f1b9459",
-    "url": "/fonts/fontello.068ca2b3.ttf"
-  },
-  {
     "revision": "a782baa8633b1359f9686ffad17e0d76",
     "url": "/fonts/fontello.a782baa8.woff"
+  },
+  {
+    "revision": "068ca2b316db98037bebdd1e4f1b9459",
+    "url": "/fonts/fontello.068ca2b3.ttf"
   },
   {
     "revision": "9354499c2824248511adf85fdf8e4c37",
@@ -92,24 +92,28 @@ self.__precacheManifest = [
     "url": "/assets/flat-ui-icons-regular.ttf"
   },
   {
+    "revision": "849d622a5133ce67a5ba8194f238ab8e",
+    "url": "/assets/waifu.css"
+  },
+  {
     "revision": "6d3a6bce02a9404bc3d331f7482f597c",
     "url": "/assets/waifu.min.css"
   },
   {
-    "revision": "835245d3e9c21e09c369f0e0a71938b6",
-    "url": "/assets/waifu-tips.js"
-  },
-  {
-    "revision": "42f85d5300f70c34524ac3092fb244ab",
-    "url": "/assets/waifu-tips.json"
+    "revision": "ffc6ede02a31ec3b6990bfa29c64fdd6",
+    "url": "/assets/flat-ui-icons-regular.svg"
   },
   {
     "revision": "ac9cce151c9384d0da1953fa4d69a088",
     "url": "/assets/waifu-tips.min.js"
   },
   {
-    "revision": "849d622a5133ce67a5ba8194f238ab8e",
-    "url": "/assets/waifu.css"
+    "revision": "42f85d5300f70c34524ac3092fb244ab",
+    "url": "/assets/waifu-tips.json"
+  },
+  {
+    "revision": "835245d3e9c21e09c369f0e0a71938b6",
+    "url": "/assets/waifu-tips.js"
   },
   {
     "revision": "b82606b349484ab6b696144862b18b5a",
@@ -130,10 +134,6 @@ self.__precacheManifest = [
   {
     "revision": "b850ecca5ab51e9035e6a36eb33b421a",
     "url": "/assets/flat-ui-icons-regular.woff"
-  },
-  {
-    "revision": "ffc6ede02a31ec3b6990bfa29c64fdd6",
-    "url": "/assets/flat-ui-icons-regular.svg"
   },
   {
     "revision": "f1d025e1d5dc1b25678397fcf6ae70d7",

@@ -44,7 +44,7 @@ export default {
   methods: {
     async fetch() {
       let config = await this.axios.get(`/getOpenWrtConfig`);
-      this.model = Object.assign({}, this.model, config.data[0]);
+      this.model = Object.assign({}, this.model, config.data);
       console.log(this.model);
     },
     async save() {

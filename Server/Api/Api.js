@@ -146,11 +146,12 @@ class BlogRouter {
         console.log(req.body);
         let model = await openWrt.create(req.body);
         res.send(model);
-
     }
 
     static async getOpenWrtConfig(req, res) {
-        let config = await openWrt.find({})
+        let config = await openWrt.find({}).lean(true)
+        delete config[0]._id
+        delete config[0].__v
         res.json(config[0])
     }
 
