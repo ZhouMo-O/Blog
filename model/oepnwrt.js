@@ -6,7 +6,7 @@ const Schema = new mongoose.Schema({
     server_port: {
         type: Number,
     },
-    passport: {
+    password: {
         type: String,
     },
     method: {
