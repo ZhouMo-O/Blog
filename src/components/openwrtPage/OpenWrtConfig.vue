@@ -9,7 +9,7 @@
         <el-input v-model="model.server_port"></el-input>
       </el-form-item>
       <el-form-item label="密码">
-        <el-input v-model="model.passport"></el-input>
+        <el-input v-model="model.password"></el-input>
       </el-form-item>
       <el-form-item label="加密方式">
         <el-input v-model="model.method"></el-input>
