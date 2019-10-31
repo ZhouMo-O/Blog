@@ -158,6 +158,7 @@ class BlogRouter {
     }
 
     static async putOpenWrtConfig(req, res) {
+        const configStatus = true
         let Adminuser = await openWrt.findOneAndUpdate(
             req.body.server,
             req.body
@@ -176,6 +177,7 @@ class BlogRouter {
 
     static async getOpenWrtConfigStatus(req, res) {
         res.send(configStatus)
+        const configStatus = false;
     }
 }
 
