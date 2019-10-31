@@ -48,11 +48,8 @@ export default {
       console.log(this.model);
     },
     async save() {
-      if (this.model._id) {
-        let res = await this.axios.put(
-          `/putOpenWrtConfig/${this.model._id}`,
-          this.model
-        );
+      if (this.model.reuser_port) {
+        let res = await this.axios.put(`/putOpenWrtConfig`, this.model);
         this.$router.push("/OpenWrtConfig");
         this.$message({
           type: "success",
