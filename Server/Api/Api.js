@@ -156,11 +156,11 @@ class BlogRouter {
     }
 
     static async putOpenWrtConfig(req, res) {
-        console.log(req.body)
-        let Adminuser = await openWrt.findByIdAndUpdate(
-            req.params.id,
+        let Adminuser = await openWrt.findOneAndUpdate(
+            req.body.server,
             req.body
-        )
+        );
+        console.log(Adminuser)
         if (Adminuser) {
             res.status(200).send({
                 message: '修改配置文件成功'

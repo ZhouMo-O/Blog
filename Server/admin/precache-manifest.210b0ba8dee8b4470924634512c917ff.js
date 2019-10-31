@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/fonts/element-icons.732389de.ttf"
   },
   {
-    "revision": "d90a1c32a39d77fedc5d",
+    "revision": "9d0a9f4b9105c1ba0ca1",
     "url": "/css/app.80bd2ad8.css"
   },
   {
@@ -36,12 +36,12 @@ self.__precacheManifest = [
     "url": "/fonts/fontello.8d4a4e6f.woff2"
   },
   {
-    "revision": "e73a0647198cfe970de0f003be95cc51",
-    "url": "/fonts/fontello.e73a0647.eot"
-  },
-  {
     "revision": "a782baa8633b1359f9686ffad17e0d76",
     "url": "/fonts/fontello.a782baa8.woff"
+  },
+  {
+    "revision": "e73a0647198cfe970de0f003be95cc51",
+    "url": "/fonts/fontello.e73a0647.eot"
   },
   {
     "revision": "068ca2b316db98037bebdd1e4f1b9459",
@@ -72,15 +72,15 @@ self.__precacheManifest = [
     "url": "/fonts/element-icons.535877f5.woff"
   },
   {
-    "revision": "d90a1c32a39d77fedc5d",
-    "url": "/js/app.e95736df.js"
+    "revision": "9d0a9f4b9105c1ba0ca1",
+    "url": "/js/app.937904f1.js"
   },
   {
     "revision": "5a507c1e75c7f8455de9021c94ac68e5",
     "url": "/img/zaoshang.5a507c1e.jpg"
   },
   {
-    "revision": "1e8483f613194e9c0ddef7850ae0e6e4",
+    "revision": "2580f7d34060bb1cca9b4ac39652862e",
     "url": "/index.html"
   },
   {
@@ -88,8 +88,8 @@ self.__precacheManifest = [
     "url": "/robots.txt"
   },
   {
-    "revision": "f1d025e1d5dc1b25678397fcf6ae70d7",
-    "url": "/assets/flat-ui-icons-regular.eot"
+    "revision": "71b22c7da4697bc0680e3f603929faba",
+    "url": "/assets/flat-ui-icons-regular.ttf"
   },
   {
     "revision": "849d622a5133ce67a5ba8194f238ab8e",
@@ -136,8 +136,8 @@ self.__precacheManifest = [
     "url": "/assets/flat-ui-icons-regular.woff"
   },
   {
-    "revision": "71b22c7da4697bc0680e3f603929faba",
-    "url": "/assets/flat-ui-icons-regular.ttf"
+    "revision": "f1d025e1d5dc1b25678397fcf6ae70d7",
+    "url": "/assets/flat-ui-icons-regular.eot"
   },
   {
     "revision": "dfa553ac2f6ae7b6f9f4ccf74b4a5da2",
