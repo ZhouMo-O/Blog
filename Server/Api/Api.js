@@ -5,6 +5,8 @@ const openWrt = require('../../model/oepnwrt');
 const assert = require('http-assert');
 const jwt = require('jsonwebtoken');
 const multer = require('multer')
+const configStatus = false;
+
 
 class BlogRouter {
     //存储blog
@@ -170,6 +172,10 @@ class BlogRouter {
                 message: '修改配置文件失败'
             })
         }
+    }
+
+    static async getOpenWrtConfigStatus(req, res) {
+        res.send(configStatus)
     }
 }
 

@@ -67,6 +67,8 @@ app.post('/api/openWrtEdit', urlencodedParser, Api.openWrtEdit)
 app.get('/api/getOpenWrtConfig', Api.getOpenWrtConfig);
 
 app.put('/api/putOpenWrtConfig', Api.putOpenWrtConfig);
+
+app.get('/api/getOpenWrtConfigStatus', Api.getOpenWrtConfigStatus)
 //---------------------数据库服务--------------------------
 mongoose.connect('mongodb://localhost:27017/blog', {
         useNewUrlParser: true,
