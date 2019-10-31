@@ -5,7 +5,7 @@ const openWrt = require('../../model/oepnwrt');
 const assert = require('http-assert');
 const jwt = require('jsonwebtoken');
 const multer = require('multer')
-const configStatus = false;
+let configStatus = false;
 
 
 class BlogRouter {
@@ -158,7 +158,7 @@ class BlogRouter {
     }
 
     static async putOpenWrtConfig(req, res) {
-        const configStatus = true
+        configStatus = true
         let Adminuser = await openWrt.findOneAndUpdate(
             req.body.server,
             req.body
@@ -177,7 +177,7 @@ class BlogRouter {
 
     static async getOpenWrtConfigStatus(req, res) {
         res.send(configStatus)
-        const configStatus = false;
+        configStatus = false;
     }
 }
 
