@@ -11,7 +11,7 @@ const jsonParser = bodyParser.json()
 const urlencodedParser = bodyParser.urlencoded({
     extended: true
 })
-
+app.use('/uploads', express.static(__dirname + '/uploads'));
 //让路由可以接收json数据
 app.use(express.json())
 app.use(history({
@@ -51,13 +51,12 @@ app.put('/api/editUser/:id', urlencodedParser, Api.EditUser);
 //文件上传
 const multer = require('multer');
 const upload = multer({
-    dist: __dirname + './upload'
+    dest: __dirname + '/uploads'
 })
-app.use('/uploads', express.static(__dirname + './uploads'));
 
 app.post('/api/upload', upload.single('file'), async (req, res) => {
     const file = req.file;
-    file.url = `http://localhost:3333/upload/${file.filename}`
+    file.url = `http://localhost:3333/uploads/${file.filename}`
     res.send(file);
 })
 

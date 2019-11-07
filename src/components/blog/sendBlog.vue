@@ -4,7 +4,12 @@
     <input type="text" v-model="blogData.title" class="title form-control" />
     <p class="blogIntro">文章简介：</p>
     <input type="text" v-model="blogData.Intro" class="title form-control" />
-    <VueEditor v-model="blogData.markdown" id="edit" useCustomImageHandler></VueEditor>
+    <VueEditor
+      v-model="blogData.markdown"
+      id="edit"
+      @image-added="handleImageAdded"
+      useCustomImageHandler
+    ></VueEditor>
     <button type="btn" class="btn btn-primary" v-on:click="saveDoc(),routerTo()">保存</button>
   </div>
 </template>
@@ -29,6 +34,13 @@ export default {
     };
   },
   methods: {
+    async handleImageAdded(file, Editor, cursorLocation, resetUploader) {
+      const formData = new FormData();
+      formData.append("file", file);
+      const res = await this.axios.post("upload", formData);
+      Editor.insertEmbed(cursorLocation, "image", res.data.url);
+      resetUploader();
+    },
     saveDoc() {
       //保存的时候判断一下路由上有没有ID传过来，有的话就是编辑，没有就是发布，
       //然后路由重定向一下
