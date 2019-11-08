@@ -2,11 +2,26 @@ module.exports = app => {
     const express = require('express');
     const router = express.Router();
     const Blog = require(`../../model/blog`).blog
+    const Tag = require(`../../model/tag`)
 
     router.post('/blogs', async (req, res) => {
-        console.log(req.body)
         const model = await Blog.create(req.body);
+        console.log(model)
         res.send(model)
+    })
+
+    router.post(`/tag`, async (req, res) => {
+        console.log(req.body)
+        const tag = await Tag.create(req.body);
+        console.log(tag)
+        res.send(tag);
+    })
+
+    router.get('/tag', async (req, res) => {
+        const items = await Tag.find().sort({
+            date: 'desc'
+        })
+        res.send(items)
     })
 
     router.get('/blogs', async (req, res) => {
