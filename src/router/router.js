@@ -10,6 +10,7 @@ import userEdit from '../components/user/userEdit';
 import userList from '../components/user/userList';
 import userLogin from '../components/user/login';
 import OpenWrtConfig from '../components/openwrtPage/OpenWrtConfig';
+import tag from "../components/tag/tag";
 Vue.use(Router)
 
 export default new Router({
@@ -60,6 +61,10 @@ export default new Router({
             path: '/OpenWrtConfig',
             name: 'OpenWrtConfig',
             component: OpenWrtConfig
+        }, {
+            path: '/blogManagerment/tagMan',
+            name: 'tagMan',
+            component: tag
         }]
     }, {
         path: '*',

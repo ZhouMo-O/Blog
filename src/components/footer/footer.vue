@@ -1,5 +1,7 @@
 <template>
-  <footer class="container-fluid"></footer>
+  <footer class="container-fluid">
+    <p class="along">若无闲事挂心头，便是人间好时节</p>
+  </footer>
 </template>
 
 <script>
@@ -20,5 +22,9 @@ footer {
   margin-top: 15px;
   text-align: center;
   background: #2f4261;
+}
+.along {
+  margin: 10px auto;
+  line-height: 50px;
 }
 </style>
