@@ -44,16 +44,16 @@ export default {
     saveDoc() {
       //保存的时候判断一下路由上有没有ID传过来，有的话就是编辑，没有就是发布，
       //然后路由重定向一下
-      let url;
+
       if (this.$route.params.userId) {
         console.log("put");
-        url = "/Editblog/" + this.$route.params.userId;
-        this.axios.post(url, this.blogData).then(data => {
+        let url = "/blogs/" + this.$route.params.userId;
+        this.axios.put(url, this.blogData).then(data => {
           console.log(data);
         });
       } else {
         console.log("post");
-        url = "/sendBlog";
+        let url = "/blogs";
         this.axios.post(url, this.blogData).then(data => {
           console.log(data);
         });
@@ -62,7 +62,7 @@ export default {
     //根据传入的ID去获取博客
     getBlog(id) {
       this.axios
-        .get(`/findBlog/` + id)
+        .get(`/blogs/` + id)
         .then(data => {
           this.blogData = data.data;
         })

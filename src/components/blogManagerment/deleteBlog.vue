@@ -29,7 +29,7 @@ export default {
   },
   created() {
     this.axios
-      .get("/findAllBlog")
+      .get("/blogs")
       .then(data => {
         data.data.ok = true;
         this.blogData = data.data;
@@ -40,20 +40,14 @@ export default {
       });
   },
   methods: {
-    deleteBlog(e) {
+    async deleteBlog(e, v) {
       var selectedBedDom = $(e.srcElement); //dom元素
-      var selectedBedDomValue = selectedBedDom[0].id;
+      var BlogId = selectedBedDom[0].id;
       var hiddenCard = $(
         e.currentTarget.parentElement.parentElement.parentElement
       )[0];
-      this.axios
-        .post(`/deleteBlog/${selectedBedDomValue}`)
-        .then(data => {
-          hiddenCard.style.display = "none";
-        })
-        .catch(err => {
-          console.log(err);
-        });
+      const res = await this.axios.delete(`/blogs/${BlogId}`);
+      hiddenCard.style.display = "none";
     },
     //传递Id
     routerTo(id) {

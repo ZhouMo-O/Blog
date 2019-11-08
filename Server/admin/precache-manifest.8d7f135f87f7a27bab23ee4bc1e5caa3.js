@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/fonts/element-icons.732389de.ttf"
   },
   {
-    "revision": "d78ba489a2a25d34f30a",
+    "revision": "7a1488cb4121de08fa14",
     "url": "/css/app.ce4111bc.css"
   },
   {
@@ -20,12 +20,12 @@ self.__precacheManifest = [
     "url": "/img/read.d805e477.svg"
   },
   {
-    "revision": "9b1f86091278cd5f9b5a81bece633f18",
-    "url": "/img/pinglun.9b1f8609.svg"
-  },
-  {
     "revision": "73f2266a479931e8cb24b096bfc0e2e9",
     "url": "/img/like.73f2266a.svg"
+  },
+  {
+    "revision": "9b1f86091278cd5f9b5a81bece633f18",
+    "url": "/img/pinglun.9b1f8609.svg"
   },
   {
     "revision": "a23210a0bad811475255613b705e5087",
@@ -36,12 +36,12 @@ self.__precacheManifest = [
     "url": "/fonts/fontello.8d4a4e6f.woff2"
   },
   {
-    "revision": "a782baa8633b1359f9686ffad17e0d76",
-    "url": "/fonts/fontello.a782baa8.woff"
-  },
-  {
     "revision": "e73a0647198cfe970de0f003be95cc51",
     "url": "/fonts/fontello.e73a0647.eot"
+  },
+  {
+    "revision": "a782baa8633b1359f9686ffad17e0d76",
+    "url": "/fonts/fontello.a782baa8.woff"
   },
   {
     "revision": "068ca2b316db98037bebdd1e4f1b9459",
@@ -56,10 +56,6 @@ self.__precacheManifest = [
     "url": "/img/del.8f3de2ae.svg"
   },
   {
-    "revision": "a078b2a5b4958499ff41cca33ba6f313",
-    "url": "/img/no.a078b2a5.svg"
-  },
-  {
     "revision": "3e641495c45c74c7caafb86323416724",
     "url": "/img/edit.3e641495.svg"
   },
@@ -68,19 +64,23 @@ self.__precacheManifest = [
     "url": "/img/yes.2305c028.svg"
   },
   {
+    "revision": "a078b2a5b4958499ff41cca33ba6f313",
+    "url": "/img/no.a078b2a5.svg"
+  },
+  {
     "revision": "535877f50039c0cb49a6196a5b7517cd",
     "url": "/fonts/element-icons.535877f5.woff"
   },
   {
-    "revision": "d78ba489a2a25d34f30a",
-    "url": "/js/app.43b9fd55.js"
+    "revision": "7a1488cb4121de08fa14",
+    "url": "/js/app.768dee60.js"
   },
   {
     "revision": "5a507c1e75c7f8455de9021c94ac68e5",
     "url": "/img/zaoshang.5a507c1e.jpg"
   },
   {
-    "revision": "95c73580743d491762e0227cfcd9135f",
+    "revision": "35be13b1f5b4697051c062406e3d6fc0",
     "url": "/index.html"
   },
   {
@@ -88,8 +88,8 @@ self.__precacheManifest = [
     "url": "/robots.txt"
   },
   {
-    "revision": "71b22c7da4697bc0680e3f603929faba",
-    "url": "/assets/flat-ui-icons-regular.ttf"
+    "revision": "ffc6ede02a31ec3b6990bfa29c64fdd6",
+    "url": "/assets/flat-ui-icons-regular.svg"
   },
   {
     "revision": "849d622a5133ce67a5ba8194f238ab8e",
@@ -100,30 +100,6 @@ self.__precacheManifest = [
     "url": "/assets/waifu.min.css"
   },
   {
-    "revision": "ffc6ede02a31ec3b6990bfa29c64fdd6",
-    "url": "/assets/flat-ui-icons-regular.svg"
-  },
-  {
-    "revision": "ac9cce151c9384d0da1953fa4d69a088",
-    "url": "/assets/waifu-tips.min.js"
-  },
-  {
-    "revision": "42f85d5300f70c34524ac3092fb244ab",
-    "url": "/assets/waifu-tips.json"
-  },
-  {
-    "revision": "835245d3e9c21e09c369f0e0a71938b6",
-    "url": "/assets/waifu-tips.js"
-  },
-  {
-    "revision": "b82606b349484ab6b696144862b18b5a",
-    "url": "/assets/live2d.min.js"
-  },
-  {
-    "revision": "4af772ebedff81ae0580babc8a6e7a19",
-    "url": "/assets/live2d.js"
-  },
-  {
     "revision": "a09e13ee94d51c524b7e2a728c7d4039",
     "url": "/assets/jquery.min.js"
   },
@@ -132,8 +108,32 @@ self.__precacheManifest = [
     "url": "/assets/jquery-ui.min.js"
   },
   {
+    "revision": "4af772ebedff81ae0580babc8a6e7a19",
+    "url": "/assets/live2d.js"
+  },
+  {
+    "revision": "835245d3e9c21e09c369f0e0a71938b6",
+    "url": "/assets/waifu-tips.js"
+  },
+  {
+    "revision": "42f85d5300f70c34524ac3092fb244ab",
+    "url": "/assets/waifu-tips.json"
+  },
+  {
+    "revision": "b82606b349484ab6b696144862b18b5a",
+    "url": "/assets/live2d.min.js"
+  },
+  {
+    "revision": "ac9cce151c9384d0da1953fa4d69a088",
+    "url": "/assets/waifu-tips.min.js"
+  },
+  {
     "revision": "b850ecca5ab51e9035e6a36eb33b421a",
     "url": "/assets/flat-ui-icons-regular.woff"
+  },
+  {
+    "revision": "71b22c7da4697bc0680e3f603929faba",
+    "url": "/assets/flat-ui-icons-regular.ttf"
   },
   {
     "revision": "f1d025e1d5dc1b25678397fcf6ae70d7",

@@ -15,7 +15,7 @@
     "cors": "^2.8.5",
     "elasticsearch": "^16.1.1",
     "element-ui": "^2.4.5",
-    "express": "^4.17.1",
+    "express": "^5.0.0-alpha.7",
     "http-assert": "^1.4.1",
     "jsonwebtoken": "^8.5.1",
     "marked": "^0.7.0",

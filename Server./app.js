@@ -68,16 +68,20 @@ app.get('/api/getOpenWrtConfig', Api.getOpenWrtConfig);
 app.put('/api/putOpenWrtConfig', Api.putOpenWrtConfig);
 
 app.get('/api/getOpenWrtConfigStatus', Api.getOpenWrtConfigStatus)
+
+require('./Api/newapi')(app)
+require('./plugins/db')(app)
 //---------------------数据库服务--------------------------
+app.listen(port, () => {
+    console.log(`create server ok port*${port}`)
+})
+
 mongoose.connect('mongodb://localhost:27017/blog', {
         useNewUrlParser: true,
         useCreateIndex: true
     })
     .then(() => {
         console.log('数据库连接成功')
-        app.listen(port, () => {
-            console.log(`create server ok port*${port}`)
-        })
     })
     .catch((err) => {
         console.log(err + "数据库连接失败,请检查数据库路径")
