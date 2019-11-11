@@ -1,7 +1,5 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
-
-const blogSchema = new Schema({
+const Schema = new mongoose.Schema({
     title: {
         type: String,
         default: true
@@ -17,10 +15,6 @@ const blogSchema = new Schema({
     Intro: {
         type: String,
         default: '点击查看详情'
-    },
-    tagCloud: {
-        type: Array,
-        default: [],
     },
     blog: {
         type: Number,
@@ -45,8 +39,13 @@ const blogSchema = new Schema({
     date: {
         type: Date,
         default: Date.now
+    },
+    parent: {
+        type: mongoose.SchemaTypes.ObjectId,
+        ref: 'tag'
     }
+
 })
 
 
-exports.blog = mongoose.model('blog', blogSchema);
+module.exports = mongoose.model('blog', Schema);

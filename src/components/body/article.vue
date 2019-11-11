@@ -58,7 +58,7 @@ export default {
     };
   },
   created() {
-    this.axios.get("/findAllBlog").then(data => {
+    this.axios.get("rest/blogs").then(data => {
       this.blogs = data.data.slice(0, 10);
       console.log(this.blogs);
     });

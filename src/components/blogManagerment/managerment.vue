@@ -16,7 +16,10 @@
             <router-link to="/blogManagerment/userList" class="nav-link">用户列表</router-link>
           </li>
           <li>
-            <router-link to="/blogManagerment/tagMan" class="nav-link">标签管理</router-link>
+            <router-link to="/blogManagerment/tagCreat" class="nav-link">创建标签</router-link>
+          </li>
+          <li>
+            <router-link to="/blogManagerment/tagList" class="nav-link">标签列表</router-link>
           </li>
           <li>
             <router-link to="/OpenWrtConfig" class="nav-link">OpenWrt配置</router-link>

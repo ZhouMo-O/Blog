@@ -1,7 +1,7 @@
 module.exports = options => {
     return async (req, res, next) => {
         const jwt = require('jsonwebtoken');
-        const AdminUser = require('../../model/user');
+        const AdminUser = require('../../model/User');
         const token = String(req.headers.authorization || '').split(' ').pop();
         if (!token) {
             res.status('401').send({
