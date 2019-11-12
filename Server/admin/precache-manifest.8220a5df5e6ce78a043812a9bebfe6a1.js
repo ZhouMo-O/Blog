@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/fonts/element-icons.732389de.ttf"
   },
   {
-    "revision": "7c29873f1aafe6fc47e4",
-    "url": "/css/app.95077674.css"
+    "revision": "a934072bbd9c81f81b7b",
+    "url": "/css/app.0d92401d.css"
   },
   {
     "revision": "2afd346fed110e1842bc",
@@ -14,38 +14,6 @@ self.__precacheManifest = [
   {
     "revision": "2afd346fed110e1842bc",
     "url": "/js/chunk-vendors.947d652b.js"
-  },
-  {
-    "revision": "73f2266a479931e8cb24b096bfc0e2e9",
-    "url": "/img/like.73f2266a.svg"
-  },
-  {
-    "revision": "9b1f86091278cd5f9b5a81bece633f18",
-    "url": "/img/pinglun.9b1f8609.svg"
-  },
-  {
-    "revision": "d805e4775e6201b010e14c0548614bb4",
-    "url": "/img/read.d805e477.svg"
-  },
-  {
-    "revision": "8d4a4e6f7431d0d7fa92b1df20f38161",
-    "url": "/fonts/fontello.8d4a4e6f.woff2"
-  },
-  {
-    "revision": "e73a0647198cfe970de0f003be95cc51",
-    "url": "/fonts/fontello.e73a0647.eot"
-  },
-  {
-    "revision": "068ca2b316db98037bebdd1e4f1b9459",
-    "url": "/fonts/fontello.068ca2b3.ttf"
-  },
-  {
-    "revision": "a782baa8633b1359f9686ffad17e0d76",
-    "url": "/fonts/fontello.a782baa8.woff"
-  },
-  {
-    "revision": "9354499c2824248511adf85fdf8e4c37",
-    "url": "/img/fontello.9354499c.svg"
   },
   {
     "revision": "8f3de2ae84aab559aa828e06956c587f",
@@ -64,6 +32,38 @@ self.__precacheManifest = [
     "url": "/img/yes.2305c028.svg"
   },
   {
+    "revision": "d805e4775e6201b010e14c0548614bb4",
+    "url": "/img/read.d805e477.svg"
+  },
+  {
+    "revision": "9b1f86091278cd5f9b5a81bece633f18",
+    "url": "/img/pinglun.9b1f8609.svg"
+  },
+  {
+    "revision": "73f2266a479931e8cb24b096bfc0e2e9",
+    "url": "/img/like.73f2266a.svg"
+  },
+  {
+    "revision": "8d4a4e6f7431d0d7fa92b1df20f38161",
+    "url": "/fonts/fontello.8d4a4e6f.woff2"
+  },
+  {
+    "revision": "a782baa8633b1359f9686ffad17e0d76",
+    "url": "/fonts/fontello.a782baa8.woff"
+  },
+  {
+    "revision": "068ca2b316db98037bebdd1e4f1b9459",
+    "url": "/fonts/fontello.068ca2b3.ttf"
+  },
+  {
+    "revision": "e73a0647198cfe970de0f003be95cc51",
+    "url": "/fonts/fontello.e73a0647.eot"
+  },
+  {
+    "revision": "9354499c2824248511adf85fdf8e4c37",
+    "url": "/img/fontello.9354499c.svg"
+  },
+  {
     "revision": "a23210a0bad811475255613b705e5087",
     "url": "/img/codeCover.a23210a0.png"
   },
@@ -72,15 +72,15 @@ self.__precacheManifest = [
     "url": "/fonts/element-icons.535877f5.woff"
   },
   {
-    "revision": "7c29873f1aafe6fc47e4",
-    "url": "/js/app.1aacc85a.js"
+    "revision": "a934072bbd9c81f81b7b",
+    "url": "/js/app.7aa64108.js"
   },
   {
     "revision": "5a507c1e75c7f8455de9021c94ac68e5",
     "url": "/img/zaoshang.5a507c1e.jpg"
   },
   {
-    "revision": "2a4f950f333099ab36e9d27fd2e4eead",
+    "revision": "3d782f91b797d8fb9c2edf53b6d8bede",
     "url": "/index.html"
   },
   {
@@ -104,32 +104,32 @@ self.__precacheManifest = [
     "url": "/assets/flat-ui-icons-regular.svg"
   },
   {
-    "revision": "c15b1008dec3c8967ea657a7bb4baaec",
-    "url": "/assets/jquery-ui.min.js"
-  },
-  {
-    "revision": "4af772ebedff81ae0580babc8a6e7a19",
-    "url": "/assets/live2d.js"
-  },
-  {
-    "revision": "b82606b349484ab6b696144862b18b5a",
-    "url": "/assets/live2d.min.js"
-  },
-  {
     "revision": "42f85d5300f70c34524ac3092fb244ab",
     "url": "/assets/waifu-tips.json"
-  },
-  {
-    "revision": "835245d3e9c21e09c369f0e0a71938b6",
-    "url": "/assets/waifu-tips.js"
   },
   {
     "revision": "ac9cce151c9384d0da1953fa4d69a088",
     "url": "/assets/waifu-tips.min.js"
   },
   {
+    "revision": "835245d3e9c21e09c369f0e0a71938b6",
+    "url": "/assets/waifu-tips.js"
+  },
+  {
+    "revision": "b82606b349484ab6b696144862b18b5a",
+    "url": "/assets/live2d.min.js"
+  },
+  {
+    "revision": "4af772ebedff81ae0580babc8a6e7a19",
+    "url": "/assets/live2d.js"
+  },
+  {
     "revision": "a09e13ee94d51c524b7e2a728c7d4039",
     "url": "/assets/jquery.min.js"
+  },
+  {
+    "revision": "c15b1008dec3c8967ea657a7bb4baaec",
+    "url": "/assets/jquery-ui.min.js"
   },
   {
     "revision": "b850ecca5ab51e9035e6a36eb33b421a",
