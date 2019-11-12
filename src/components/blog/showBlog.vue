@@ -43,7 +43,7 @@ export default {
   },
   created() {
     this.axios
-      .get(`/findBlog/${this.id}`)
+      .get(`rest/blogs/${this.id}`)
       .then(data => {
         this.blog = data.data;
         this.blog.date = this.blog.date.slice(0, 10);

@@ -17,9 +17,6 @@
       </div>
       <div class="tag_box">
         <span class="tag_list">{{blog.parent.tagName}}</span>
-        <span class="tag_list">{{blog.parent.tagName}}</span>
-        <span class="tag_list">{{blog.parent.tagName}}</span>
-        <span class="tag_list">{{blog.parent.tagName}}</span>
       </div>
     </div>
   </div>
