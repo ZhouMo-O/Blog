@@ -42,7 +42,7 @@ const Schema = new mongoose.Schema({
     },
     parent: {
         type: mongoose.SchemaTypes.ObjectId,
-        ref: 'tag'
+        ref: 'tag',
     }
 
 })
