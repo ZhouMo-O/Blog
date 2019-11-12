@@ -23,19 +23,6 @@ app.use(require('cors')())
 ///-----------------------路由----------------------------
 
 
-
-//blog
-
-app.post('/api/sendBlog', urlencodedParser, tokenVerify(), Api.sendBlog)
-
-app.get('/api/findAllBlog', Api.findAllBlog)
-
-app.get('/api/findBlog/:id', urlencodedParser, Api.findBlog)
-
-app.post('/api/deleteBlog/:id', tokenVerify(), urlencodedParser, Api.deleteBlog)
-
-app.post('/api/Editblog/:id', tokenVerify(), urlencodedParser, Api.Editblog)
-
 //user
 app.post('/api/login', urlencodedParser, Api.userLogin);
 
