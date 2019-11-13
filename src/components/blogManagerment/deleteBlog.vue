@@ -21,7 +21,6 @@
       </div>
       <div class="tag_box">
         <span v-for="item in blog.parent" :key="blog._id" class="tag_list">{{item.tagName}}</span>
-        <span>{{le}}</span>
       </div>
     </div>
   </div>
@@ -34,8 +33,7 @@ export default {
   data() {
     return {
       ok: false,
-      blogData: [],
-      le: VUE_APP_API_URL
+      blogData: []
     };
   },
   methods: {
