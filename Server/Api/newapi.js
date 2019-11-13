@@ -35,34 +35,35 @@ module.exports = app => {
 
     router.post('/', async (req, res) => {
         const model = await req.Model.create(req.body);
-        console.log(model)
+        console.log(`创建数据`);
+        console.log(req.body)
         res.send(model)
     })
 
 
     router.get('/', async (req, res) => {
         //管理查询
-        console.log('get list')
+        console.log(`获取${req.params.resource}列表`)
         const items = await req.Model.find().populate('parent').sort({
             date: 'desc'
         })
-        console.log(items)
         res.send(items)
     })
 
     router.get('/:id', async (req, res) => {
+        console.log(`查找${req.params.resource}id为:${req.params.id}`)
         const model = await req.Model.findById(req.params.id);
         res.send(model)
     })
 
     router.put('/:id', async (req, res) => {
-        console.log(req.params.id)
+        console.log(`修改${req.params.resource}id为:${req.params.id}`)
         const item = await req.Model.findByIdAndUpdate(req.params.id, req.body);
         res.send(item);
     })
 
     router.delete('/:id', async (req, res) => {
-        console.log(req.params.id);
+        console.log(`删除${req.params.resource}id为:${req.params.id}`);
         await req.Model.findByIdAndDelete(req.params.id)
         res.send({
             success: true
