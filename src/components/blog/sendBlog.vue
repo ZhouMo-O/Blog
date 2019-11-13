@@ -57,9 +57,9 @@ export default {
       //保存的时候判断一下路由上有没有ID传过来，有的话就是编辑，没有就是发布，
       //然后路由重定向一下
       console.log(this.blogData);
-      if (this.$route.params.userId) {
+      if (this.id) {
         console.log("put");
-        let url = "rest/blogs/" + this.$route.params.userId;
+        let url = "rest/blogs/" + this.id;
         this.axios.put(url, this.blogData).then(data => {
           console.log(data);
         });

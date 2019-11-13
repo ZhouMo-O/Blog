@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/fonts/element-icons.732389de.ttf"
   },
   {
-    "revision": "5a56c2e9f8b95bd4df56",
-    "url": "/css/app.89658f4b.css"
+    "revision": "485b910e7e57f3c8d782",
+    "url": "/css/app.1c8fb465.css"
   },
   {
     "revision": "2afd346fed110e1842bc",
@@ -16,12 +16,12 @@ self.__precacheManifest = [
     "url": "/js/chunk-vendors.947d652b.js"
   },
   {
-    "revision": "73f2266a479931e8cb24b096bfc0e2e9",
-    "url": "/img/like.73f2266a.svg"
-  },
-  {
     "revision": "d805e4775e6201b010e14c0548614bb4",
     "url": "/img/read.d805e477.svg"
+  },
+  {
+    "revision": "73f2266a479931e8cb24b096bfc0e2e9",
+    "url": "/img/like.73f2266a.svg"
   },
   {
     "revision": "9b1f86091278cd5f9b5a81bece633f18",
@@ -32,12 +32,12 @@ self.__precacheManifest = [
     "url": "/img/del.8f3de2ae.svg"
   },
   {
-    "revision": "2305c02818c4b1af07d2e9d49d0abb4f",
-    "url": "/img/yes.2305c028.svg"
-  },
-  {
     "revision": "3e641495c45c74c7caafb86323416724",
     "url": "/img/edit.3e641495.svg"
+  },
+  {
+    "revision": "2305c02818c4b1af07d2e9d49d0abb4f",
+    "url": "/img/yes.2305c028.svg"
   },
   {
     "revision": "a078b2a5b4958499ff41cca33ba6f313",
@@ -52,12 +52,12 @@ self.__precacheManifest = [
     "url": "/fonts/fontello.e73a0647.eot"
   },
   {
-    "revision": "a782baa8633b1359f9686ffad17e0d76",
-    "url": "/fonts/fontello.a782baa8.woff"
-  },
-  {
     "revision": "068ca2b316db98037bebdd1e4f1b9459",
     "url": "/fonts/fontello.068ca2b3.ttf"
+  },
+  {
+    "revision": "a782baa8633b1359f9686ffad17e0d76",
+    "url": "/fonts/fontello.a782baa8.woff"
   },
   {
     "revision": "9354499c2824248511adf85fdf8e4c37",
@@ -72,15 +72,15 @@ self.__precacheManifest = [
     "url": "/fonts/element-icons.535877f5.woff"
   },
   {
-    "revision": "5a56c2e9f8b95bd4df56",
-    "url": "/js/app.9cfbff99.js"
+    "revision": "485b910e7e57f3c8d782",
+    "url": "/js/app.7c67c890.js"
   },
   {
     "revision": "5a507c1e75c7f8455de9021c94ac68e5",
     "url": "/img/zaoshang.5a507c1e.jpg"
   },
   {
-    "revision": "1dc4adf8e6de07e65881afb1381cc766",
+    "revision": "1ffa4ecb964ae39a3b7d9fbdf1ae31ee",
     "url": "/index.html"
   },
   {
@@ -92,8 +92,16 @@ self.__precacheManifest = [
     "url": "/assets/flat-ui-icons-regular.eot"
   },
   {
-    "revision": "c15b1008dec3c8967ea657a7bb4baaec",
-    "url": "/assets/jquery-ui.min.js"
+    "revision": "849d622a5133ce67a5ba8194f238ab8e",
+    "url": "/assets/waifu.css"
+  },
+  {
+    "revision": "6d3a6bce02a9404bc3d331f7482f597c",
+    "url": "/assets/waifu.min.css"
+  },
+  {
+    "revision": "ffc6ede02a31ec3b6990bfa29c64fdd6",
+    "url": "/assets/flat-ui-icons-regular.svg"
   },
   {
     "revision": "ac9cce151c9384d0da1953fa4d69a088",
@@ -104,28 +112,24 @@ self.__precacheManifest = [
     "url": "/assets/waifu-tips.json"
   },
   {
-    "revision": "849d622a5133ce67a5ba8194f238ab8e",
-    "url": "/assets/waifu.css"
-  },
-  {
-    "revision": "4af772ebedff81ae0580babc8a6e7a19",
-    "url": "/assets/live2d.js"
+    "revision": "835245d3e9c21e09c369f0e0a71938b6",
+    "url": "/assets/waifu-tips.js"
   },
   {
     "revision": "b82606b349484ab6b696144862b18b5a",
     "url": "/assets/live2d.min.js"
   },
   {
-    "revision": "6d3a6bce02a9404bc3d331f7482f597c",
-    "url": "/assets/waifu.min.css"
-  },
-  {
-    "revision": "835245d3e9c21e09c369f0e0a71938b6",
-    "url": "/assets/waifu-tips.js"
+    "revision": "4af772ebedff81ae0580babc8a6e7a19",
+    "url": "/assets/live2d.js"
   },
   {
     "revision": "a09e13ee94d51c524b7e2a728c7d4039",
     "url": "/assets/jquery.min.js"
+  },
+  {
+    "revision": "c15b1008dec3c8967ea657a7bb4baaec",
+    "url": "/assets/jquery-ui.min.js"
   },
   {
     "revision": "b850ecca5ab51e9035e6a36eb33b421a",
@@ -134,10 +138,6 @@ self.__precacheManifest = [
   {
     "revision": "71b22c7da4697bc0680e3f603929faba",
     "url": "/assets/flat-ui-icons-regular.ttf"
-  },
-  {
-    "revision": "ffc6ede02a31ec3b6990bfa29c64fdd6",
-    "url": "/assets/flat-ui-icons-regular.svg"
   },
   {
     "revision": "dfa553ac2f6ae7b6f9f4ccf74b4a5da2",
