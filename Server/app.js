@@ -35,17 +35,6 @@ app.get('/api/findOneUser/:id', urlencodedParser, Api.findOneUser);
 app.post('/api/authVerify', tokenVerify(), urlencodedParser, Api.authVerify);
 
 app.put('/api/editUser/:id', urlencodedParser, Api.EditUser);
-//文件上传
-const multer = require('multer');
-const upload = multer({
-    dest: __dirname + '/uploads'
-})
-
-app.post('/api/upload', upload.single('file'), async (req, res) => {
-    const file = req.file;
-    file.url = `http://www.blog5.net.cn/uploads/${file.filename}`
-    res.send(file);
-})
 
 //openwrt
 app.post('/api/openWrtEdit', urlencodedParser, Api.openWrtEdit)

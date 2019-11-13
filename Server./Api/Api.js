@@ -1,4 +1,4 @@
-const user = require('../../model/user');
+const user = require('../../model/User');
 const openWrt = require('../../model/Oepnwrt');
 const jwt = require('jsonwebtoken');
 

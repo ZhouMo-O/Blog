@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>OpenWrt配置</h1>
+    <h3>OpenWrt配置:</h3>
     <el-form label-width="120px" @submit.native.prevent="save">
       <el-form-item label="服务器地址">
         <el-input v-model="model.server"></el-input>

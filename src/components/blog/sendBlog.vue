@@ -1,5 +1,6 @@
 <template>
   <div class="panel panel-default container">
+    <h3>{{id?'编辑':'创建'}}博客</h3>
     <p class="blogTitle">文章标题：</p>
     <input type="text" v-model="blogData.title" class="title form-control" />
     <p class="blogIntro">文章简介：</p>
@@ -11,7 +12,7 @@
       useCustomImageHandler
     ></VueEditor>
     <button type="btn" class="btn btn-primary" v-on:click="saveDoc(),routerTo()">保存</button>
-    <el-select class="select" v-model="blogData.parent" placeholder="请选择">
+    <el-select class="select" v-model="blogData.parent" multiple placeholder="请选择">
       <el-option v-for="item in parents" :key="item._id" :label="item.tagName" :value="item._id"></el-option>
     </el-select>
   </div>
@@ -21,6 +22,9 @@
 import { VueEditor } from "vue2-editor";
 export default {
   name: "sendBlog",
+  props: {
+    id: {}
+  },
   components: {
     VueEditor
   },
@@ -68,15 +72,10 @@ export default {
       }
     },
     //根据传入的ID去获取博客
-    getBlog(id) {
-      this.axios
-        .get(`rest/blogs/` + id)
-        .then(data => {
-          this.blogData = data.data;
-        })
-        .catch(err => {
-          console.log(err);
-        });
+    async fetchEditBlog() {
+      const res = await this.axios.get(`rest/blogs/${this.id}`);
+      console.log(res);
+      this.blogData = res.data;
     },
     routerTo() {
       this.$router.push({
@@ -92,6 +91,7 @@ export default {
   },
   created() {
     this.fetchParents();
+    this.id && this.fetchEditBlog();
   }
 };
 </script>

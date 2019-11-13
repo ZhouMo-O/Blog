@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>管理员列表</h1>
+    <h3>用户列表:</h3>
     <el-table :data="items">
       <el-table-column prop="_id" label="ID" width="230"></el-table-column>
       <el-table-column prop="username" label="用户名"></el-table-column>
@@ -32,8 +32,19 @@ export default {
       this.items = res.data;
       console.log(this.items);
     },
-    remove(row) {
-      console.log(row);
+    async remove(row) {
+      this.$confirm(`是否删除用户 ${row.username}`, "提示", {
+        confirmButtonText: "确定",
+        cancelButtonText: "取消",
+        type: "warning"
+      }).then(async () => {
+        const res = await this.axios.delete(`rest/users/${row._id}`);
+        this.$message({
+          type: "success",
+          message: "删除成功!"
+        });
+        this.fetch();
+      });
     }
   },
   created() {
@@ -43,4 +54,4 @@ export default {
 </script>
 
 <style>
-</style>template>
+</style>

@@ -40,10 +40,10 @@ const Schema = new mongoose.Schema({
         type: Date,
         default: Date.now
     },
-    parent: {
+    parent: [{
         type: mongoose.SchemaTypes.ObjectId,
         ref: 'tag',
-    }
+    }]
 
 })
 

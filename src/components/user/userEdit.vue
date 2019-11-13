@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>add user</h1>
+    <h3>{{id?'编辑':'创建'}}用户:</h3>
     <el-form label-width="120px" @submit.native.prevent="save">
       <el-form-item label="用户名">
         <el-input v-model="model.username"></el-input>
@@ -27,12 +27,12 @@ export default {
   },
   methods: {
     async fetch() {
-      let user = await this.axios.get(`/findOneUser/${this.id}`);
+      let user = await this.axios.get(`rest/users/${this.id}`);
       this.model = user.data;
     },
     async save() {
       if (this.id) {
-        let res = await this.axios.put(`/editUser/${this.id}`, this.model);
+        let res = await this.axios.put(`rest/users/${this.id}`, this.model);
         this.$router.push("/blogManagerment/userList");
         this.$message({
           type: "success",
@@ -55,4 +55,7 @@ export default {
 </script>
 
 <style>
+h3 {
+  text-align: left;
+}
 </style>

@@ -1,11 +1,6 @@
 <template>
   <div class="col-md-8 row">
-    <div
-      class="col-lg-12 animated fadeIn"
-      v-bind:class="changeClass"
-      v-if="MybodyData.show"
-      v-for="blog in blogs"
-    >
+    <div class="col-lg-12 animated fadeIn" v-bind:class="changeClass" v-for="blog in blogs">
       <article class="article">
         <router-link v-bind:to="'/showBlog/'+blog._id" class="articleImg"></router-link>
         <div class="article_title">
@@ -64,7 +59,7 @@ export default {
     });
   },
   mounted() {
-    window.addEventListener("scroll", this.handlerScroll);
+    // window.addEventListener("scroll", this.handlerScroll);
   },
   methods: {
     handlerScroll() {

@@ -1,6 +1,6 @@
 <template>
   <el-form ref="form" :model="modle" label-width="80px">
-    <h1>{{id?'编辑':'创建'}}标签</h1>
+    <h3>{{id?'编辑':'创建'}}标签:</h3>
     <br />
     <el-form-item label="标签名称">
       <el-input v-model="modle.tagName">11</el-input>

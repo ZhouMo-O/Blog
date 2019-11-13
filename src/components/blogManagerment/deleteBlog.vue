@@ -13,10 +13,15 @@
         <h5>{{blog.title.length >15? blog.title.slice(0,25)+'...':blog.title}}</h5>
         <p class="content">{{blog.Intro.length >15? blog.Intro.slice(0,15)+'...':blog.Intro}}</p>
         <span v-bind:id="blog._id" class="deleteBlog" v-on:click="toggle($event)"></span>
-        <span @click="routerTo(blog._id)" v-bind:id="blog._id" class="edit"></span>
+        <span
+          @click="$router.push(`/blogManagerment/editBlog/${blog._id}`)"
+          v-bind:id="blog._id"
+          class="edit"
+        ></span>
       </div>
       <div class="tag_box">
-        <span class="tag_list">{{blog.parent.tagName}}</span>
+        <span v-for="item in blog.parent" :key="blog._id" class="tag_list">{{item.tagName}}</span>
+        <span>{{le}}</span>
       </div>
     </div>
   </div>
@@ -29,10 +34,12 @@ export default {
   data() {
     return {
       ok: false,
-      blogData: []
+      blogData: [],
+      le: VUE_APP_API_URL
     };
   },
   methods: {
+    //删除博客
     async deleteBlog(e) {
       var selectedBedDom = $(e.srcElement); //dom元素
       var BlogId = selectedBedDom[0].id;
@@ -42,18 +49,19 @@ export default {
       const res = await this.axios.delete(`rest/blogs/${BlogId}`);
       hiddenCard.style.display = "none";
     },
+    //获取博客列表
     async fetchBlogList() {
       const data = await this.axios.get("rest/blogs");
       this.blogData = Object.assign({}, this.blogData, data.data);
       console.log(this.blogData);
     },
-    //传递Id
-    routerTo(id) {
-      this.$router.push({
-        name: "sendBlog",
-        params: { userId: id }
-      });
-    },
+    //传递Id  ps:曾经使用的方法，但是耦合性很大 弃用了。
+    // routerTo(id) {
+    //   this.$router.push({
+    //     name: "sendBlog",
+    //     params: { userId: id }
+    //   });
+    // },
     toggle(e) {
       var message =
         $(e.currentTarget.parentElement.parentElement.firstElementChild)[0]
@@ -120,7 +128,9 @@ h5 {
 
 /*tag BOX*/
 .tag_box {
-  border: 1px solid #fefefe;
+  float: left;
+  width: auto;
+  border: 1px solid #ffffff;
 }
 
 .tag_list {

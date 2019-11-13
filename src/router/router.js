@@ -46,6 +46,11 @@ export default new Router({
             name: 'sendBlog',
             component: sendBlog,
         }, {
+            path: '/blogManagerment/editBlog/:id',
+            name: 'editBlog',
+            props: true,
+            component: sendBlog,
+        }, {
             path: '/blogManagerment/userCreate',
             name: 'userEdit',
             component: userEdit,

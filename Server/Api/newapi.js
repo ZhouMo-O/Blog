@@ -43,7 +43,7 @@ module.exports = app => {
 
     router.get('/', async (req, res) => {
         //管理查询
-        console.log(`获取${req.params.resource}列表`)
+        console.log(`获取 ${req.params.resource} 列表`)
         const items = await req.Model.find().populate('parent').sort({
             date: 'desc'
         })
@@ -51,19 +51,19 @@ module.exports = app => {
     })
 
     router.get('/:id', async (req, res) => {
-        console.log(`查找${req.params.resource}id为:${req.params.id}`)
+        console.log(`查找 ${req.params.resource} id为:${req.params.id}`)
         const model = await req.Model.findById(req.params.id);
         res.send(model)
     })
 
     router.put('/:id', async (req, res) => {
-        console.log(`修改${req.params.resource}id为:${req.params.id}`)
+        console.log(`修改 ${req.params.resource} id为:${req.params.id}`)
         const item = await req.Model.findByIdAndUpdate(req.params.id, req.body);
         res.send(item);
     })
 
     router.delete('/:id', async (req, res) => {
-        console.log(`删除${req.params.resource}id为:${req.params.id}`);
+        console.log(`删除 ${req.params.resource} id为:${req.params.id}`);
         await req.Model.findByIdAndDelete(req.params.id)
         res.send({
             success: true
@@ -75,4 +75,16 @@ module.exports = app => {
         req.Model = require(`../../model/${modeName}`);
         next();
     }, router)
+
+    //文件上传
+    const multer = require('multer');
+    const upload = multer({
+        dest: __dirname + '/../uploads'
+    })
+    app.post('/api/upload', upload.single('file'), async (req, res) => {
+        const file = req.file;
+        file.url = `http://www.blog5.net.cn/uploads/${file.filename}`
+        res.send(file);
+    })
+
 }

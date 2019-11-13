@@ -3,6 +3,8 @@ node_modules
 /dist
 /DB
 /dump
+./Server
+/Server/uploads
 # /Server/admin
 
 # local env files
