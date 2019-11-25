@@ -24,6 +24,7 @@
     <div class="markdown-body articles">
       <div v-html="blog.markdown" class="ql-editor"></div>
     </div>
+    <div id="gitalk-container"></div>
     <VueEditor style="display:none"></VueEditor>
   </div>
 </template>

@@ -1,6 +1,7 @@
 <template>
   <div class="container-fluid articleBox">
     <div class="row center">
+      <!-- 在博客中有两个地方用到了article这个组件，但是却需要他们以不同的style展示所以当访问这里的是给他传一个这样的class参数过去 -->
       <Articles changeClass="col-xl-6" />
       <Aside />
     </div>

@@ -20,7 +20,12 @@
         ></span>
       </div>
       <div class="tag_box">
-        <span v-for="item in blog.parent" :key="blog._id" class="tag_list">{{item.tagName}}</span>
+        <span
+          v-for="item in blog.parent"
+          :key="blog.tagName"
+          class="tag_list"
+          @click="$router.push(`/tag/${item._id}`)"
+        >{{item.tagName}}</span>
       </div>
     </div>
   </div>

@@ -1,6 +1,6 @@
 <template>
   <div class="container-fluid articleBox">
-    <div class="row center">
+    <div class="row center" v-bind:tagName="tagName">
       <Article />
       <Aside />
     </div>
@@ -11,6 +11,11 @@
 import Article from "../body/article";
 import Aside from "../body/aside";
 export default {
+  props: {
+    tagName: {
+      type: String
+    }
+  },
   name: "blogList",
   data() {
     return {

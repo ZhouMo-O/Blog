@@ -3,35 +3,46 @@
     <div class="col-lg-12 animated fadeIn" v-bind:class="changeClass" v-for="blog in blogs">
       <article class="article">
         <router-link v-bind:to="'/showBlog/'+blog._id" class="articleImg"></router-link>
+        <!-- 标签 -->
+        <div class="tag_box">
+          <span
+            @click="getTagBlog(item._id)"
+            v-for="item in blog.parent"
+            :key="blog.tagName"
+            class="tag_list"
+          >{{item.tagName}}</span>
+        </div>
         <div class="article_title">
-          <h3>
+          <h4>
             <!-- 标题 -->
             <router-link
               v-bind:to="'/showBlog/'+blog._id"
-            >{{blog.title.length>10?blog.title.slice(0,10)+'...':blog.title}}</router-link>
-          </h3>
+            >{{blog.title.length>10?blog.title.slice(0,25)+'...':blog.title}}</router-link>
+          </h4>
           <!-- 文章简介 -->
-          <p>{{blog.Intro.length>10?blog.Intro.slice(0,20)+'...':blog.Intro}}</p>
+          <p id="Intro">{{blog.Intro.length>10?blog.Intro.slice(0,20)+'...':blog.Intro}}</p>
+          <div class="blogData">
+            <!-- 时间 -->
+            <div class="date">{{blog.date.slice(0,10)}}</div>
 
-          <!-- 时间 -->
-          <div class="date">{{blog.date.slice(0,10)}}</div>
+            <!-- 阅读 -->
 
-          <!-- 阅读 -->
-          <div class="read">
-            <div class="read_icon"></div>
-            <div class="read_number">:{{blog.read}}</div>
-          </div>
+            <div class="read">
+              <div class="read_icon"></div>
+              <div class="read_number">:{{blog.read}}</div>
+            </div>
 
-          <!-- 点赞 -->
-          <div class="like">
-            <div class="like_icon"></div>
-            <div class="like_number">:{{blog.like}}</div>
-          </div>
+            <!-- 点赞 -->
+            <div class="like">
+              <div class="like_icon"></div>
+              <div class="like_number">:{{blog.like}}</div>
+            </div>
 
-          <!-- 评论数 -->
-          <div class="comment">
-            <div class="comment_icon"></div>
-            <div class="comment_number">:{{blog.comment.length-1}}</div>
+            <!-- 评论数 -->
+            <div class="comment">
+              <div class="comment_icon"></div>
+              <div class="comment_number">:{{blog.comment.length-1}}</div>
+            </div>
           </div>
         </div>
       </article>
@@ -42,7 +53,14 @@
 <script>
 export default {
   name: "Articles",
-  props: ["changeClass"],
+  props: {
+    changeClass: {
+      type: String
+    },
+    id: {
+      type: String
+    }
+  },
   data() {
     return {
       MybodyData: {
@@ -53,27 +71,31 @@ export default {
     };
   },
   created() {
-    this.axios.get("rest/blogs").then(data => {
-      this.blogs = data.data.slice(0, 10);
-      console.log(this.blogs);
-    });
-  },
-  mounted() {
-    // window.addEventListener("scroll", this.handlerScroll);
+    this.fetchBlogList();
   },
   methods: {
-    handlerScroll() {
-      var scrollTop =
-        document.documentElement.scrollTop || document.body.scrollTop;
-      if (scrollTop) {
-        this.MybodyData.show = true;
-      }
+    async getTagBlog(id) {
+      const res = await this.axios.get(`/tag/blogs/${id}`);
+      this.$router.push("/blogList");
+      this.blogs = res.data;
+    },
+    async fetchBlogList() {
+      const res = await this.axios.get("rest/blogs");
+      this.blogs = res.data;
     }
   }
 };
 </script>
 
 <style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 15s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
 /*动画*/
 @keyframes myfirst {
   from {
@@ -86,7 +108,7 @@ export default {
   }
   to {
     position: relative;
-    top: -10px;
+    top: -8px;
     box-shadow: 1px 5px 15px #c1c1c1;
     border-radius: 5px;
   }
@@ -95,7 +117,7 @@ export default {
 @keyframes learn {
   0% {
     position: relative;
-    top: -10px;
+    top: -8px;
   }
   20% {
     position: relative;
@@ -132,13 +154,44 @@ export default {
 .article {
   border: 1px solid #e3e3e5;
   border-radius: 3px;
-  height: 270px;
+  height: 280px;
   margin: 8px;
   padding: 5px;
   background: #fcfcfc;
   box-sizing: border-box;
   box-shadow: 1px -5px 40px #dadde3;
   animation: learn 1s forwards;
+}
+
+.col-xl-6 > .article {
+  height: 290px;
+}
+
+/*博客标签 外层 这么写是因为没有标签的时候博客样式会混乱*/
+.tag_box {
+  float: left;
+  height: 30px;
+  border-left: 1px solid #fcfcfc;
+  position: relative;
+  top: -25px;
+  left: -1px;
+}
+.tag_box > span {
+  float: left;
+  height: 23px;
+  margin-right: 4px;
+  margin-left: 1px;
+  padding: 3px;
+  font-size: 10px;
+  /* border: 1px solid #dfdfdf; */
+  background: rgba(252, 252, 252, 0.8);
+  border-radius: 5px;
+}
+
+/*文章简介*/
+#Intro {
+  /* border: 1px solid red; */
+  font-size: 10px;
 }
 
 /*文章图片大小*/
@@ -157,17 +210,23 @@ export default {
   float: left;
   /* border: 1px solid red; */
   position: relative;
+  top: -25px;
 }
 
 /*文章标题*/
-.article > div > h3 {
+.article > div > h4 {
   float: left;
   margin-left: 5px;
   margin-top: 5px;
   /* border: 1px solid red; */
 }
 
-.article > div > h3 > a {
+.article > div > h4 > a {
+  font-size: 18px;
+  font-weight: 800;
+  color: #333;
+  text-align: left;
+  font-family: -apple-system, "Open Sans", "Microsoft YaHei", sans-serif;
   text-decoration: none;
 }
 
@@ -186,7 +245,7 @@ export default {
   /* border: 1px solid red; */
   position: absolute;
   font-size: 14px;
-  bottom: 5px;
+  bottom: -10px;
   left: 5px;
   float: left;
 }
@@ -194,7 +253,7 @@ export default {
 .comment {
   /* border: 1px solid red; */
   position: absolute;
-  bottom: 5px;
+  bottom: -10px;
   right: 0px;
 }
 
@@ -218,7 +277,7 @@ export default {
 .read {
   /* border: 1px solid red; */
   position: absolute;
-  bottom: 5px;
+  bottom: -10px;
   right: 55px;
 }
 
@@ -242,7 +301,7 @@ export default {
 .like {
   /* border: 1px solid red; */
   position: absolute;
-  bottom: 5px;
+  bottom: -10px;
   right: 110px;
 }
 

@@ -4,34 +4,6 @@ module.exports = app => {
         mergeParams: true
     });
 
-    // router.post(`/tags`, async (req, res) => {
-    //     console.log(req.body)
-    //     const tag = await Tag.create(req.body);
-    //     console.log(tag)
-    //     res.send(tag);
-    // })
-
-    // router.get('/tags', async (req, res) => {
-    //     const items = await Tag.find().sort({
-    //         date: 'desc'
-    //     })
-    //     res.send(items)
-    // })
-
-    // router.get('/tags/:id', async (req, res) => {
-    //     const data = await Tag.findById(req.params.id)
-    //     res.send(data);
-    // })
-
-    // router.put('/tags/:id', async (req, res) => {
-    //     const data = await Tag.findByIdAndUpdate(req.params.id, req.body)
-    //     res.send(data);
-    // })
-
-    // router.delete('/tags/:id', async (req, res) => {
-    //     const data = await Tag.findByIdAndDelete(req.params.id)
-    //     res.send(data)
-    // })
 
     router.post('/', async (req, res) => {
         const model = await req.Model.create(req.body);
@@ -56,6 +28,11 @@ module.exports = app => {
         res.send(model)
     })
 
+    app.get('/tagName/1', async (req, res) => {
+        console.log('look it')
+        res.send('11');
+    })
+
     router.put('/:id', async (req, res) => {
         console.log(`修改 ${req.params.resource} id为:${req.params.id}`)
         const item = await req.Model.findByIdAndUpdate(req.params.id, req.body);
@@ -73,6 +50,7 @@ module.exports = app => {
     app.use('/api/rest/:resource', async (req, res, next) => {
         const modeName = require('inflection').classify(req.params.resource);
         req.Model = require(`../../model/${modeName}`);
+        console.log(req.Model)
         next();
     }, router)
 
@@ -86,5 +64,6 @@ module.exports = app => {
         file.url = `http://www.blog5.net.cn/uploads/${file.filename}`
         res.send(file);
     })
+
 
 }

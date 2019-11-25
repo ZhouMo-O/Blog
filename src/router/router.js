@@ -33,6 +33,11 @@ export default new Router({
         name: 'blogList',
         component: blogList
     }, {
+        path: '/tag/:id',
+        name: 'findTag',
+        props: true,
+        component: blogList,
+    }, {
         path: '/blogManagerment',
         name: 'blogManagerment',
         component: blogManagerment,
