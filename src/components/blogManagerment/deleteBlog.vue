@@ -22,9 +22,9 @@
       <div class="tag_box">
         <span
           v-for="item in blog.parent"
-          :key="blog.tagName"
+          :key="item.tagName"
           class="tag_list"
-          @click="$router.push(`/tag/${item._id}`)"
+          @click="getTagBlog(item._id)"
         >{{item.tagName}}</span>
       </div>
     </div>
@@ -42,6 +42,11 @@ export default {
     };
   },
   methods: {
+    /*点击后获得相同标签的博客*/
+    async getTagBlog(id) {
+      const res = await this.axios.get(`/tag/blogs/${id}`);
+      this.blogData = res.data;
+    },
     //删除博客
     async deleteBlog(e) {
       var selectedBedDom = $(e.srcElement); //dom元素

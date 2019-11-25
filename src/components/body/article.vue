@@ -154,7 +154,7 @@ export default {
 .article {
   border: 1px solid #e3e3e5;
   border-radius: 3px;
-  height: 280px;
+  height: 240px;
   margin: 8px;
   padding: 5px;
   background: #fcfcfc;
