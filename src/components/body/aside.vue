@@ -1,11 +1,13 @@
 <template>
   <aside class="col-md-3">
     <tagCloud></tagCloud>
+    <links></links>
   </aside>
 </template>
 
 <script>
 import tagCloud from "../body/TagCloud/tagCloud";
+import links from "../body/links/links";
 export default {
   name: "Aside",
   data() {
@@ -22,7 +24,8 @@ export default {
     }
   },
   components: {
-    tagCloud
+    tagCloud,
+    links
   }
 };
 </script>
