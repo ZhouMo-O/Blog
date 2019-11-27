@@ -1,13 +1,11 @@
 <template>
   <aside class="col-md-3">
-    <div class="an">
-      <h5>公告</h5>
-      <div>正在施工</div>
-    </div>
+    <tagCloud></tagCloud>
   </aside>
 </template>
 
 <script>
+import tagCloud from "../body/TagCloud/tagCloud";
 export default {
   name: "Aside",
   data() {
@@ -22,6 +20,9 @@ export default {
         return blog.title.match(this.search);
       });
     }
+  },
+  components: {
+    tagCloud
   }
 };
 </script>
