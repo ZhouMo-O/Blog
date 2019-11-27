@@ -38,6 +38,7 @@ export default {
   margin-left: 1vw !important;
   background: #fcfcfc;
   border: 1px solid#E3E3E5;
+  padding: 10px;
   box-shadow: 1px -5px 40px #dadde3;
 }
 
