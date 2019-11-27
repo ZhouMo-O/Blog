@@ -1,14 +1,30 @@
 <template>
   <div class="link">
     <span class="linksTitle">友情链接:</span>
-    <div v-for="tag in tagData" :key="tag._id">
-      <span class="links">{{tag.tagName}}</span>
+    <div v-for="link of tagData">
+      <a class="links" target="_blank" :href="link.link">{{link.linksIntro}}</a>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      tagData: [],
+      link: "12312312"
+    };
+  },
+  methods: {
+    async getTagList() {
+      const res = await this.axios.get("rest/links");
+      this.tagData = res.data;
+    }
+  },
+  created() {
+    this.getTagList();
+  }
+};
 </script>
 
 <style scoped>
@@ -32,9 +48,11 @@ export default {};
   margin: 4px;
   padding: 3px;
   font-size: 10px;
-  border: 1px solid;
+  border: 1px solid #e3e3e5;
   background: #ffffff;
   border-radius: 5px;
   cursor: pointer;
+  text-decoration: none;
+  box-shadow: 1px -5px -15px #e3e3e5;
 }
 </style>

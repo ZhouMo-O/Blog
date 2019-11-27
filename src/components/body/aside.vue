@@ -38,7 +38,7 @@ export default {
   margin-left: 1vw !important;
   background: #fcfcfc;
   border: 1px solid#E3E3E5;
-  box-shadow: 1px -5px 15px #e7eaed;
+  box-shadow: 1px -5px 40px #dadde3;
 }
 
 /*媒体查询*/

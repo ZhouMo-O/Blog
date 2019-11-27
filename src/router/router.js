@@ -10,8 +10,13 @@ import userEdit from '../components/user/userEdit';
 import userList from '../components/user/userList';
 import userLogin from '../components/user/login';
 import OpenWrtConfig from '../components/openwrtPage/OpenWrtConfig';
-import tagEdit from "../components/tag/tagEdit";
-import tagList from "../components/tag/tagList";
+import tagEdit from "../components/blogManagerment/tag/tagEdit";
+import tagList from "../components/blogManagerment/tag/tagList";
+import linksEdit from "../components/blogManagerment/links/linksEdit";
+import linksList from "../components/blogManagerment/links/linksList";
+
+
+
 Vue.use(Router)
 
 export default new Router({
@@ -86,6 +91,20 @@ export default new Router({
             path: '/blogManagerment/tagList',
             name: 'tagList',
             component: tagList
+        }, {
+            path: '/blogManagerment/linksEdit/:id',
+            name: 'linksEdit',
+            component: linksEdit,
+            props: true
+        }, {
+            path: '/blogManagerment/linksCreate',
+            name: 'linksCreate',
+            component: linksEdit,
+            props: true
+        }, {
+            path: '/blogManagerment/linksList',
+            name: 'linksList',
+            component: linksList
         }]
     }, {
         path: '*',

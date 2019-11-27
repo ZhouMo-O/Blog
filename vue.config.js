@@ -3,8 +3,12 @@ module.exports = {
     outputDir: __dirname + '/Server/admin',
     publicPath: process.env.NODE_ENV === "production" ? "/" : "/",
     configureWebpack: {
-        $: "jquery",
-        jQuery: "jquery"
+        plugins: [
+            new webpack.ProvidePlugin({
+                $: "jquery",
+                jQuery: "jquery"
+            })
+        ]
     },
     devServer: {
         open: true,

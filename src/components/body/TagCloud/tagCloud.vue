@@ -2,7 +2,7 @@
   <div class="tagCloud">
     <span class="tagTitle">云标签:</span>
     <div v-for="tag in tagData" :key="tag._id">
-      <span class="tag" @click="$router.push(`blogList${tag._id}`)">{{tag.tagName}}</span>
+      <span class="tag" @click>{{tag.tagName}}</span>
     </div>
   </div>
 </template>

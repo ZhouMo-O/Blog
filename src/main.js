@@ -7,7 +7,6 @@ import router from './router/router' //路由
 import './plugins/element.js'
 import http from './http'
 import "gitalk/dist/gitalk.css";
-import Gitalk from "gitalk";
 import {
   VueEditor
 } from "vue2-editor";

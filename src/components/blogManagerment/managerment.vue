@@ -22,6 +22,12 @@
             <router-link to="/blogManagerment/tagList" class="nav-link">标签列表</router-link>
           </li>
           <li>
+            <router-link to="/blogManagerment/linksCreate" class="nav-link">添加友链</router-link>
+          </li>
+          <li>
+            <router-link to="/blogManagerment/linksList" class="nav-link">友链列表</router-link>
+          </li>
+          <li>
             <router-link to="/OpenWrtConfig" class="nav-link">OpenWrt配置</router-link>
           </li>
         </ul>
