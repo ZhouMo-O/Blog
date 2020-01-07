@@ -1,6 +1,11 @@
 <template>
   <div class="col-md-8 row">
-    <div class="col-lg-12 animated fadeIn" v-bind:class="changeClass" v-for="blog in blogs">
+    <div
+      class="col-lg-12 animated fadeIn"
+      v-bind:class="changeClass"
+      v-for="blog in blogs.slice((currentPage-1)*pagesize,currentPage*pagesize)"
+      :key="blog._id"
+    >
       <article class="article">
         <router-link v-bind:to="'/showBlog/'+blog._id" class="articleImg"></router-link>
         <!-- 标签 -->
@@ -8,7 +13,7 @@
           <span
             @click="getTagBlog(item._id)"
             v-for="item in blog.parent"
-            :key="blog.tagName"
+            :key="item.tagName"
             class="tag_list"
           >{{item.tagName}}</span>
         </div>
@@ -47,6 +52,19 @@
         </div>
       </article>
     </div>
+
+    <div class="page">
+      <el-pagination
+        background
+        @size-change="handleSizeChange"
+        @current-change="handleCurrentChange"
+        :current-page="currentPage"
+        :page-sizes="[5, 10, 20, 40]"
+        :page-size="pagesize"
+        layout="total, prev, next, jumper"
+        :total="blogs.length"
+      ></el-pagination>
+    </div>
   </div>
 </template>
 <script>
@@ -66,13 +84,23 @@ export default {
         show: false,
         article: true
       },
-      blogs: []
+      blogs: [],
+      currentPage: 1, //当前页
+      pagesize: 10 //    每页的数据
     };
   },
   created() {
     this.fetchBlogList();
   },
   methods: {
+    handleSizeChange: function(size) {
+      this.pagesize = size;
+      console.log(this.pagesize); //每页下拉显示数据
+    },
+    handleCurrentChange: function(currentPage) {
+      this.currentPage = currentPage;
+      console.log(this.currentPage); //点击第几页
+    },
     async getTagBlog(id) {
       const res = await this.axios.get(`/tag/blogs/${id}`);
       this.$router.push("/blogList");
@@ -87,6 +115,10 @@ export default {
 </script>
 
 <style scoped>
+.page {
+  width: 100%;
+}
+
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 15s;
