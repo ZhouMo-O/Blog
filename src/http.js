@@ -10,8 +10,7 @@ Vue.prototype.axios = axios;
 Vue.prototype.HOST = "/api/";
 axios.defaults.headers.post["Content-Type"] =
   "application/x-www-form-urlencoded"; // 配置请求头
-axios.defaults.baseURL =
-  process.env.VUE_APP_URL || /*'/api' */ "http://localhost:3333/api";
+axios.defaults.baseURL = process.env.VUE_APP_URL || "/api"; // "http://localhost:3333/api";
 //axios添加请求拦截器
 axios.interceptors.request.use(
   function(config) {
@@ -27,15 +26,15 @@ axios.interceptors.request.use(
 );
 
 axios.interceptors.response.use(
-  res => {
+  (res) => {
     return res; //正常数据就返回
   },
-  err => {
+  (err) => {
     if (err.response.data.message) {
       Vue.prototype.$message({
         //定义全局变量消息message，只要有err信息，那么就会触发这个message方法，就会给提示报错信息
         type: "error", //err风格
-        message: err.response.data.message //展示约定好的数据
+        message: err.response.data.message, //展示约定好的数据
       });
     }
     if (err.response.status === 401) {

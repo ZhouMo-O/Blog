@@ -29,7 +29,7 @@ export default {
 }
 #indexView {
   /* border: 1px solid red; */
-  min-height: 75vh;
+  min-height: 95vh;
 }
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;

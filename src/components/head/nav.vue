@@ -31,6 +31,9 @@
           <li class="nav-item">
             <router-link to="/userLogin" class="nav-link">login</router-link>
           </li>
+          <li class="nav-item">
+            <router-link to="/about" class="nav-link">about</router-link>
+          </li>
         </ul>
       </div>
     </nav>
