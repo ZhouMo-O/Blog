@@ -29,7 +29,9 @@
         我除了编码测试之外，还要和用户和开发方打交道。所以算是学习了如何跟进项目，感觉也蛮有意思的，所以我并不讨厌产品经理，反而我希望能有个靠谱的产品经理，这种感觉只有当过孤儿院院长的人才会懂。
       </p>
       <p>&#160;&#160;&#160;&#160;如果你喜欢博客里的一些内容，或者你想和我交个朋友，聊聊天，交流一下厨艺。那就加我的WeChat吧，期待孤岛上我的能收到你的漂流瓶。</p>
-      <img src="http://www.blog5.net.cn/uploads/ea9b9f805999898b00540bd4a251dc20" alt />
+      <div class="wechatImg">
+        <img src="http://www.blog5.net.cn/uploads/ea9b9f805999898b00540bd4a251dc20" alt />
+      </div>
     </el-card>
   </div>
 </template>
@@ -46,5 +48,10 @@ export default {};
   width: 90vw;
   min-height: 90vh;
   margin: 30px auto;
+}
+
+.wechatImg {
+  float: right;
+  margin: 0 auto;
 }
 </style>
